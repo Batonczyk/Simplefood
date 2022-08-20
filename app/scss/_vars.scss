@@ -1,27 +1,21 @@
-$primary-color1: #001B36;
-$primary-color2: #FF6838;
-$primary-color3: #ECECEC;
-$primary-color4: #F9FAFF;
-$primary-color5: #363853;
-$primary-color6: #31352B;
-$primary-color7: #fff;
+$orange: #FF6838;
+$silver100: #ECECEC;
+$silver200: #F9FAFF;
+$title: #363853;
+$accent: #31352B;
+$bg: #fff;
 
-%textstyle-300 {
-  font-family: "Rubik", sans-serif;
+%rubik-300 {
+  font-family: "Rubik";
   font-weight: 300;
 }
 
-%textstyle-400 {
-  font-family: "Rubik", sans-serif;
+%rubik-400 {
+  font-family: "Rubik";
   font-weight: 400;
 }
 
-%textstyle-500 {
-  font-family: "Rubik", sans-serif;
+%rubik-500 {
+  font-family: "Rubik";
   font-weight: 500;
-}
-
-%textstyle-600 {
-  font-family: "Rubik", sans-serif;
-  font-weight: 600;
 }

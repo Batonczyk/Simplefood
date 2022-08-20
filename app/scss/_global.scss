@@ -1,21 +1,39 @@
+html,
 body {
-  @extend %textstyle-400;
-  font-size: 16px;
-  line-height: 140%;
-  background-color: $primary-color4;
-  color: $primary-color6;
+  height: 100%;
 }
 
-footer {
-  flex: 0 0 auto;
+body {
+  @extend %rubik-400;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: $silver200;
+  color: $accent;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex-grow: 1;
 }
 
 .title {
-  @extend %textstyle-500;
-  color: $primary-color5;
+  font-weight: 500;
+  color: $title;
   line-height: 130%;
   font-size: 36px;
   margin-bottom: 60px;
+}
+
+.mixitup-control-active {
+  background-color: $orange;
+  color: $bg;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.mixitup-control-active svg path {
+  fill: $bg;
+  transition: fill 0.3s ease;
 }
 
 .sr-only {
@@ -29,69 +47,40 @@ footer {
   border: 0;
 }
 
+.btn {
+  padding: 12px 32px;
+  background-color: $orange;
+  border-radius: 6px;
+  color: $bg;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+}
+
+.active {
+  color: $orange;
+}
+
 .animation {
   transition: box-shadow 0.3s ease, color 0.3s ease, background-color 0.3s ease;
 
+  &:focus {
+    background-color: rgba(255, 122, 80, 0.1);
+    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+    border-radius: 5px;
+    outline: 0;
+  }
+
   &:hover {
     background-color: rgba(255, 255, 255, 0.1);
-    box-shadow: 0px 5px 12px rgba(255, 104, 56, 0.2), 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
-    color: $primary-color2;
+    box-shadow: 0 5px 12px rgba(255, 104, 56, 0.2), 0 0 0 2px rgba(255, 104, 56, 0.7);
     border-radius: 5px;
-  }
-
-  &:focus {
-    box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
-    background-color: rgba(255, 122, 80, 0.1);
-    color: $primary-color2;
-    border-radius: 5px;
+    color: $orange;
   }
 
   &:active {
     background-color: rgba(255, 122, 80, 0.1);
+    border-radius: 5px;
     box-shadow: none;
-    border-radius: 5px;
-  }
-}
-
-.animation__logo {
-  transition: box-shadow 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
-
-  &:hover {
-    opacity: 0.8;
-  }
-
-  &:focus {
-    box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
-    border-radius: 5px;
-  }
-
-  &:active {
-    opacity: 0.5;
-  }
-}
-
-.animation__text {
-  transition: box-shadow 0.3s ease, opacity 0.3s ease, background-color 0.3s ease, color 0.3s ease;
-
-  &:hover,
-  &:focus,
-  &:active {
-    text-decoration: none;
-  }
-
-  &:hover {
-    color: $primary-color2;
-  }
-
-  &:focus {
-    box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
-    border-radius: 5px;
-    color: $primary-color6;
-  }
-
-  &:active {
-    box-shadow: none;
-    text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
   }
 }
 

@@ -25,6 +25,28 @@ body {
   margin-bottom: 60px;
 }
 
+.sidebar__title {
+  font-size: 24px;
+  padding: 15px;
+  line-height: 120%;
+  border-bottom: 1px solid $silver100;
+}
+
+.sidebar__items {
+  border: 1px solid $silver100;
+  border-radius: 5px;
+  background-color: $bg;
+  margin-bottom: 30px;
+}
+
+.sidebar__item {
+  padding: 22px 15px;
+}
+
+.section {
+  padding-bottom: 120px;
+}
+
 .mixitup-control-active {
   background-color: $orange;
   color: $bg;
@@ -82,6 +104,12 @@ body {
     border-radius: 5px;
     box-shadow: none;
   }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {

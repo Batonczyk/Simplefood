@@ -623,168 +623,138 @@
   <footer class="footer">
     <div class="container">
       <div class="footer__top">
-
-        <form class="form" action="#">
-
-          <a class="logo animation__logo" href="#">
-            <img class="logo__image logo__footer" src="images/logo.svg" alt="логотип Симпл Фуд">
+        <form class="form">
+          <a class="logo form__logo" href="">
+            <img class="logo__image" src="images/logo.svg" alt="логотип Симпл Фуд">
           </a>
-
-          <input class="animation__text" type="email" placeholder="Ваш email" required>
-          <button class="animation" type="submit">
-            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M9.31798 14.3001C9.05865 14.3001 8.81927 14.1616 8.70234 13.9406L6.66076 10.0822C6.54864 9.87034 6.5679 9.61684 6.71028 9.42119L10.0058 5.20009L5.53816 8.31359C5.33112 8.44879 5.06285 8.46569 4.83861 8.36039L0.756133 6.43184C0.511253 6.31549 0.361987 6.07304 0.37712 5.81434C0.391565 5.55564 0.568346 5.32944 0.825607 5.24039L13.895 0.690388C14.1461 0.603938 14.4288 0.660488 14.6193 0.840538C14.8092 1.01929 14.8711 1.28709 14.7782 1.52499L9.96319 13.875C9.86827 14.1181 9.62958 14.2851 9.35581 14.2988C9.34343 14.2994 9.33036 14.3001 9.31798 14.3001Z"
-                fill="white" />
-            </svg>
-            Подписаться
-          </button>
+          <div class="form__item">
+            <label for="mail"></label>
+            <input class="form__input" type="text" id="mail" placeholder="Ваш email" required>
+            <button class="form__btn" type="submit">
+              <svg class="form__svg">
+                <use xlink:href="images/sprite.svg#frame"></use>
+              </svg>
+              Подписаться
+            </button>
+          </div>
         </form>
-
-        <ul class="footer__item footer__item--menu"><span class="sr-only">Как это работает</span>
-          <li>
-            <a href="#">Как это работает</a>
-
-          </li>
-          <li>
-            <a href="#">Продукты</a>
-            <span class="sr-only">Продукты</span>
-          </li>
-          <li>
-            <a href="#">Блюда</a>
-            <span class="sr-only">Блюда</span>
-          </li>
-          <li>
-            <a href="#">Меню</a>
-            <span class="sr-only">Меню</span>
-          </li>
-        </ul>
-
-        <ul class="footer__item footer__item--news">
-          <li>
-            <a href="#">О нас</a>
-            <span class="sr-only">О нас</span>
-          </li>
-          <li>
-            <a href="#">Новости</a>
-            <span class="sr-only">Новости</span>
-          </li>
-          <li>
-            <a href="#">Партнеры</a>
-            <span class="sr-only">Партнеры</span>
-          </li>
-          <li>
-            <a href="#">ЧаВо</a>
-            <span class="sr-only">ЧаВо</span>
-          </li>
-        </ul>
-
-        <ul class="footer__item footer__item--blog">
-          <li>
-            <a href="#">Скачать приложение</a>
-            <span class="sr-only">Скачать приложение</span>
-          </li>
-          <li>
-            <a href="#">Блог</a>
-            <span class="sr-only">Блог</span>
-          </li>
-          <li>
-            <a href="#">Что нового?</a>
-            <span class="sr-only">Что нового?</span>
-          </li>
-          <li>
-            <a href="#">Карта сайта
+        <ul class="footer-menu">
+          <li class="footer-menu__item">
+            <a class="footer-menu__link" href="#" target="_blank">
+              Как это работает
             </a>
-            <span class="sr-only">Карта сайта</span>
+          </li>
+          <li class="footer-menu__item">
+            <a class="footer-menu__link" href="#" target="_blank">
+              Продукты
+            </a>
+          </li>
+          <li class="footer-menu__item">
+            <a class="footer-menu__link" href="#" target="_blank">
+              Блюда
+            </a>
+          </li>
+          <li class="footer-menu__item">
+            <a class="footer-menu__link" href="#" target="_blank">
+              Меню
+            </a>
           </li>
         </ul>
-
-        <adress>
-          <ul class="footer__item footer__item--contacts">
-            <li>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M14.5 10.5005C14.5 9.11924 13.3808 8 12.0005 8C10.6192 8 9.5 9.11924 9.5 10.5005C9.5 11.8808 10.6192 13 12.0005 13C13.3808 13 14.5 11.8808 14.5 10.5005Z"
-                  stroke="#31352B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M11.9995 21C10.801 21 4.5 15.8984 4.5 10.5633C4.5 6.38664 7.8571 3 11.9995 3C16.1419 3 19.5 6.38664 19.5 10.5633C19.5 15.8984 13.198 21 11.9995 21Z"
-                  stroke="#31352B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-
-              <a class="footer__item--location" href="#">ул. Т.Г.Шевченко, 1</a>
-              <span class="sr-only">ул. Т.Г.Шевченко, 1</span>
-            </li>
-            <li>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M14.353 2.5C18.054 2.911 20.978 5.831 21.393 9.532" stroke="#31352B" stroke-width="1.5"
-                  stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M14.353 6.04297C16.124 6.38697 17.508 7.77197 17.853 9.54297" stroke="#31352B"
-                  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M11.0315 12.4724C15.0205 16.4604 15.9254 11.8467 18.4653 14.3848C20.9138 16.8328 22.3222 17.3232 19.2188 20.4247C18.8302 20.737 16.3613 24.4943 7.68447 15.8197C-0.993406 7.144 2.76157 4.67244 3.07394 4.28395C6.18377 1.17385 6.66682 2.58938 9.11539 5.03733C11.6541 7.5765 7.04254 8.48441 11.0315 12.4724Z"
-                  stroke="#31352B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-
-              <a class="footer__item--calling" href="tel:+380501112233">380501112233</a>
-              <span class="sr-only">номер телефона 380501112233</span>
-            </li>
-            <li>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M17.9026 8.85107L13.4593 12.4641C12.6198 13.1301 11.4387 13.1301 10.5992 12.4641L6.11844 8.85107"
-                  stroke="#31352B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M16.9089 21C19.9502 21.0084 22 18.5095 22 15.4384V8.57001C22 5.49883 19.9502 3 16.9089 3H7.09114C4.04979 3 2 5.49883 2 8.57001V15.4384C2 18.5095 4.04979 21.0084 7.09114 21H16.9089Z"
-                  stroke="#31352B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-
-              <a class="footer__item--email" href="mailto:support@sfood.com">support@sfood.com</a>
-              <span class="sr-only">почта support@sfood.com</span>
-            </li>
-          </ul>
-          <ul class="footer__social">
-            <li>
-              <a href="#">
-                <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="19.5" cy="19.5" r="19.5" fill="#ECECEC" />
-                  <path
-                    d="M17.5468 29.5263V19.8948H15V16.427H17.5468V13.465C17.5468 11.1374 19.0512 9 22.5176 9C23.9211 9 24.959 9.13455 24.959 9.13455L24.8772 12.3729C24.8772 12.3729 23.8188 12.3626 22.6638 12.3626C21.4137 12.3626 21.2134 12.9387 21.2134 13.8948V16.427H24.9765L24.8128 19.8948H21.2134V29.5263H17.5468Z"
-                    fill="#31352B" />
-                </svg>
+        <ul class="footer-news">
+          <li class="footer-news__item">
+            <a class="footer-news__link" href="#" target="_blank">
+              О нас
+            </a>
+          </li>
+          <li class="footer-news__item">
+            <a class="footer-news__link" href="#" target="_blank">
+              Новости
+            </a>
+          </li>
+          <li class="footer-news__item">
+            <a class="footer-news__link" href="#" target="_blank">
+              Партнеры
+            </a>
+          </li>
+          <li class="footer-news__item">
+            <a class="footer-news__link" href="#" target="_blank">
+              ЧаВо
+            </a>
+          </li>
+        </ul>
+        <ul class="footer-map">
+          <li class="footer-map__item">
+            <a class="footer-map__link" href="#" target="_blank">
+              Скачать приложение
+            </a>
+          </li>
+          <li class="footer-map__item">
+            <a class="footer-map__link" href="#" target="_blank">
+              Блог
+            </a>
+          </li>
+          <li class="footer-map__item">
+            <a class="footer-map__link" href="#" target="_blank">
+              Что нового?
+            </a>
+          </li>
+          <li class="footer-map__item">
+            <a class="footer-map__link" href="#" target="_blank">
+              Карта сайта
+            </a>
+          </li>
+        </ul>
+        <ul class="footer-contacts">
+          <address class="footer-contacts__address">
+            <li class="footer-contacts__item footer-contacts__item--location">
+              <a class="footer-contacts__link" href="" target="_blank">
+                ул. Т.Г.Шевченко, 1
               </a>
             </li>
-            <li>
-              <a href="#">
-                <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="19.5" cy="19.5" r="19.5" fill="#ECECEC" />
-                  <path
-                    d="M29.5263 12.9809C28.7715 13.3065 27.95 13.5408 27.1039 13.6321C27.9824 13.1102 28.6402 12.2857 28.954 11.3133C28.1297 11.8037 27.2266 12.1475 26.2849 12.3296C25.8913 11.9088 25.4153 11.5736 24.8865 11.3449C24.3577 11.1161 23.7874 10.9987 23.2113 11C20.8802 11 19.0054 12.8896 19.0054 15.2084C19.0054 15.534 19.0448 15.8596 19.109 16.1729C15.6184 15.9904 12.5053 14.3228 10.4357 11.7697C10.0586 12.4138 9.86095 13.1472 9.86338 13.8936C9.86338 15.3539 10.6059 16.6416 11.7382 17.3989C11.0709 17.3726 10.4193 17.1892 9.83625 16.8636V16.9154C9.83625 18.9604 11.2818 20.6551 13.2084 21.0449C12.8466 21.1388 12.4745 21.1869 12.1008 21.1879C11.827 21.1879 11.5679 21.1608 11.3065 21.1238C11.8393 22.7914 13.3909 24.0026 15.2386 24.042C13.793 25.1743 11.9824 25.8403 10.0163 25.8403C9.66357 25.8403 9.33795 25.828 9 25.7885C10.8649 26.9849 13.0776 27.6756 15.4606 27.6756C23.1965 27.6756 27.4295 21.2669 27.4295 15.7042C27.4295 15.5217 27.4295 15.3391 27.4172 15.1566C28.2362 14.5571 28.954 13.8146 29.5263 12.9809Z"
-                    fill="#31352B" />
-                </svg>
+            <li class="footer-contacts__item footer-contacts__item--calling">
+              <a class="footer-contacts__link" href="tel:380501112233" target="_blank">
+                380501112233
               </a>
             </li>
-            <li>
-              <a href="#">
-                <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="19.5" cy="19.5" r="19.5" fill="#ECECEC" />
-                  <path
-                    d="M19.7476 16.4986C17.9572 16.4986 16.4962 17.9597 16.4962 19.75C16.4962 21.5403 17.9572 23.0014 19.7476 23.0014C21.5379 23.0014 22.9989 21.5403 22.9989 19.75C22.9989 17.9597 21.5379 16.4986 19.7476 16.4986ZM29.4993 19.75C29.4993 18.4036 29.5115 17.0694 29.4359 15.7254C29.3602 14.1644 29.0041 12.7789 27.8626 11.6374C26.7186 10.4934 25.3356 10.1398 23.7746 10.0641C22.4282 9.98853 21.094 10.0007 19.75 10.0007C18.4036 10.0007 17.0694 9.98853 15.7254 10.0641C14.1644 10.1398 12.7789 10.4959 11.6374 11.6374C10.4934 12.7814 10.1398 14.1644 10.0641 15.7254C9.98853 17.0718 10.0007 18.406 10.0007 19.75C10.0007 21.094 9.98853 22.4306 10.0641 23.7746C10.1398 25.3356 10.4959 26.7211 11.6374 27.8626C12.7814 29.0066 14.1644 29.3602 15.7254 29.4359C17.0718 29.5115 18.406 29.4993 19.75 29.4993C21.0964 29.4993 22.4306 29.5115 23.7746 29.4359C25.3356 29.3602 26.7211 29.0041 27.8626 27.8626C29.0066 26.7186 29.3602 25.3356 29.4359 23.7746C29.5139 22.4306 29.4993 21.0964 29.4993 19.75V19.75ZM19.7476 24.7527C16.9791 24.7527 14.7449 22.5184 14.7449 19.75C14.7449 16.9816 16.9791 14.7473 19.7476 14.7473C22.516 14.7473 24.7503 16.9816 24.7503 19.75C24.7503 22.5184 22.516 24.7527 19.7476 24.7527ZM24.9551 15.7108C24.3088 15.7108 23.7868 15.1888 23.7868 14.5424C23.7868 13.896 24.3088 13.3741 24.9551 13.3741C25.6015 13.3741 26.1235 13.896 26.1235 14.5424C26.1237 14.6959 26.0936 14.8479 26.035 14.9898C25.9763 15.1316 25.8903 15.2605 25.7817 15.369C25.6732 15.4775 25.5443 15.5636 25.4025 15.6222C25.2606 15.6809 25.1086 15.711 24.9551 15.7108V15.7108Z"
-                    fill="#31352B" />
-                </svg>
+            <li class="footer-contacts__item footer-contacts__item--mail">
+              <a class="footer-contacts__link" href="mailto:support@sfood.com" target="_blank">
+                support@sfood.com
               </a>
             </li>
-          </ul>
-        </adress>
+            <ul class="social">
+              <li class="social__links">
+                <a class="social__link" href="">
+                  <svg class="social__icon">
+                    <use xlink:href="images/sprite.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__links">
+                <a class="social__link" href="">
+                  <svg class="social__icon">
+                    <use xlink:href="images/sprite.svg#twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__links">
+                <a class="social__link" href="">
+                  <svg class="social__icon">
+                    <use xlink:href="images/sprite.svg#instagram"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </address>
+        </ul>
       </div>
     </div>
-    <div class="footer__bottom">
-      <div class="container">
-        <p>© 2022 Simple Food</p>
-      </div>
+    <div class="footer-bottom">
+      <span class="footer-bottom__text">
+        © 2022 Simple Food
+      </span>
     </div>
   </footer>
 
-  <script src="js/mixitup.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>
 

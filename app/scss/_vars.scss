@@ -1,6 +1,7 @@
 $orange: #FF6838;
 $silver100: #ECECEC;
 $silver200: #F9FAFF;
+$silverdecor: #C2C2C2;
 $title: #363853;
 $accent: #31352B;
 $bg: #fff;
@@ -18,4 +19,19 @@ $bg: #fff;
 %rubik-500 {
   font-family: "Rubik";
   font-weight: 500;
+}
+
+%checkbox-hidden {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
+}
+
+%sidebar-text {
+  font-size: 18px;
+  line-height: 120%;
+  letter-spacing: 0.03em;
+  color: $accent;
 }

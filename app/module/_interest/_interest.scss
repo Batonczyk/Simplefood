@@ -1,0 +1,47 @@
+.interest {
+  margin-bottom: 112px;
+
+  &__item {
+    max-width: 0;
+  }
+
+  .interest-box {
+    position: relative;
+
+    .slick-initialized .slick-slide {
+      width: 250px;
+    }
+
+    .slick-track {
+      left: 16px;
+      top: 1px;
+    }
+
+    .slick-list {
+      height: 305px;
+    }
+
+    .slick-arrow {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      top: -35%;
+      left: 94%;
+      border: 3px solid $silverdecor;
+      border-radius: 50%;
+      width: 39px;
+      height: 39px;
+    }
+
+    .slick-prev {
+      transform: translate(-29px, 3px);
+    }
+
+    .slick-next {
+      transform: translate(28px, 3px);
+    }
+
+  }
+}

@@ -1,0 +1,27 @@
+.mobile-box {
+  display: flex;
+  margin-bottom: 120px;
+  line-height: 1.5;
+
+  &__item {
+    max-width: 540px;
+    margin-right: 60px;
+  }
+
+  &__title {
+    padding-top: 50px;
+    margin-bottom: 45px;
+  }
+
+  &__text {
+    margin-bottom: 30px;
+    font-size: 20px;
+    opacity: 0.9;
+  }
+
+  &__links {
+    max-width: 285px;
+    display: flex;
+    justify-content: space-between;
+  }
+}

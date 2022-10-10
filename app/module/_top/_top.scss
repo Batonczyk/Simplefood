@@ -1,0 +1,35 @@
+.top {
+  margin-bottom: 59px;
+  background-color: rgba(255, 122, 80, 0.1);
+
+  .breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 24px 0;
+    line-height: 1.2;
+
+    &__list {
+      white-space: nowrap;
+      font-size: 14px;
+      color: #505050;
+      letter-spacing: 0.03em;
+      position: relative;
+
+      &:not(:last-child) {
+        padding-right: 17px;
+      }
+
+      &:not(:last-child)::before {
+        content: '';
+        position: absolute;
+        top: 4px;
+        right: 6px;
+        width: 6px;
+        height: 10px;
+        background-image: url('../images/icons/chevron.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+}

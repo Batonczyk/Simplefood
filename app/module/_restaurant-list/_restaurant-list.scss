@@ -1,0 +1,95 @@
+.restaurant-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+
+  &__content {
+    background-color: $bg;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: box-shadow 0.2s ease-in, border-radius 0.2s ease-in;
+
+    &:hover {
+      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+      border-radius: 10px;
+    }
+  }
+
+  &__image {
+    object-fit: contain;
+    margin-bottom: 15px;
+  }
+
+  &__name {
+    padding-left: 20px;
+    font-weight: 400;
+    font-size: 24px;
+    margin-bottom: 20px;
+    line-height: 130%;
+  }
+
+  &__add {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px 20px 10px;
+    position: relative;
+
+    &::before {
+      content: '';
+      background-image: url('../images/icons/timeopen.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 22px;
+      height: 22px;
+      position: absolute;
+      left: 20px;
+      top: 3px;
+    }
+  }
+
+  &__svg {
+    width: 14px;
+    height: 12px;
+    fill: $bg;
+  }
+
+  &__time {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.6;
+    padding-left: 42px;
+  }
+
+  &__link {
+    padding: 5px 32px 4px 33px;
+    background-color: $orange;
+    border-radius: 20px;
+    text-align: center;
+    transition: box-shadow 0.2s ease-in, border-radius 0.2s ease-in, background-color 0.2s ease-in, fill 0.2s ease-in;
+
+    &:focus {
+      background-color: #FFF2ED;
+      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+      border-radius: 20px;
+    }
+
+    &:hover {
+      background-color: #FFFFFF;
+      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+      border-radius: 20px;
+    }
+
+    &:active {
+      background-color: #FFF2ED;
+      border-radius: 20px;
+      box-shadow: none;
+    }
+
+    &:focus .restaurant-list__svg,
+    &:hover .restaurant-list__svg,
+    &:active .restaurant-list__svg {
+      fill: $orange;
+    }
+  }
+}

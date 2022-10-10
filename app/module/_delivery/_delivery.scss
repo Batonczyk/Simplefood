@@ -1,0 +1,59 @@
+.benefits {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1030px;
+  line-height: 1.5;
+
+  &__image {
+    margin-right: 120px;
+  }
+
+  &__item {
+    max-width: 470px;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: 150%;
+    font-weight: 400;
+    opacity: 0.9;
+    margin-bottom: 30px;
+  }
+
+  &__advantages {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__svg {
+    margin-right: 30px;
+    width: 34px;
+    height: 34px;
+  }
+
+  .resturant {
+    fill: #FF2222;
+  }
+
+  .delivery {
+    fill: #00AAFF;
+  }
+
+  .time {
+    fill: $orange;
+  }
+
+  &__btn {
+    font-size: 18px
+  }
+}

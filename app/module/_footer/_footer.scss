@@ -1,0 +1,228 @@
+.footer {
+  line-height: 1.3;
+
+  &__top {
+    display: grid;
+    grid-template-columns: 200px 153px 91px 187px 195px;
+    column-gap: 70px;
+    margin-bottom: 60px;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    &__logo {
+      display: inline-block;
+      margin-bottom: 18px;
+    }
+
+    &__item {
+      max-width: 200px;
+    }
+
+    &__input {
+      width: 100%;
+      margin-bottom: 12px;
+      border: transparent;
+      border: 1px solid $silverdecor;
+      border-radius: 5px;
+      padding: 13px 15px;
+      transition: color 0.2s ease-in, box-shadow 0.2s ease-in, border-radius 0.2s ease-in;
+
+      &:focus {
+        box-shadow: 0 0 0 2px #FF6838;
+        border-radius: 5px;
+      }
+
+      &::placeholder {
+        color: $silverdecor;
+        font-weight: 400;
+        font-size: 14px;
+        transition: color 0.2s ease-in, opacity 0.2s ease-in;
+      }
+
+      &:hover::placeholder {
+        opacity: 0.9;
+        color: $title;
+      }
+    }
+
+    &__btn {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding: 13px 39px 13px 39px;
+      font-size: 14px;
+      background-color: $orange;
+      color: $bg;
+      border-radius: 5px;
+      transition: fill 0.2s ease-in, color 0.2s ease-in, border-radius 0.2s ease-in, box-shadow 0.2s ease-in, background-color 0.2s ease-in;
+
+      &:focus,
+      &:hover,
+      &:active {
+        color: $orange;
+        box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+        border-radius: 5px;
+      }
+
+      &:focus {
+        background-color: rgba(255, 122, 80, 0.1);
+      }
+
+      &:hover {
+        background-color: #FFFFFF;
+        border-radius: 5px;
+        color: $orange;
+      }
+
+      &:active {
+        background-color: #FFF2ED;
+        border-radius: 5px;
+        box-shadow: none;
+      }
+
+      &:focus .form__svg,
+      &:hover .form__svg,
+      &:active .form__svg {
+        fill: $orange;
+      }
+    }
+
+    &__svg {
+      width: 16px;
+      height: 16px;
+      margin-right: 15px;
+      fill: $bg;
+    }
+  }
+
+  .footer-menu,
+  .footer-news,
+  .footer-map {
+    font-size: 18px;
+    letter-spacing: 0.01em;
+
+    &__item {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+
+    &__link {
+      transition: color 0.2s ease-in;
+
+      &:hover {
+        color: $orange;
+      }
+    }
+  }
+
+  .footer-contacts {
+    &__address {
+      font-style: normal;
+    }
+
+    &__item {
+      padding-left: 31px;
+      position: relative;
+
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        top: 6px;
+        left: 0;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+
+      &--location::before {
+        background-image: url('../images/icons/location.svg');
+      }
+
+      &--calling::before {
+        background-image: url('../images/icons/calling.svg');
+      }
+
+      &--mail::before {
+        background-image: url('../images/icons/message.svg');
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 15px;
+        line-height: 32px;
+      }
+    }
+
+    &__link {
+      transition: color 0.2s ease-in;
+
+      &:hover {
+        color: $orange;
+      }
+    }
+  }
+
+  .social {
+    display: flex;
+
+    &__links {
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+
+    &__link {
+      display: flex;
+      align-items: center;
+      border-radius: 50%;
+      padding: 10px;
+      background-color: $silver100;
+      transition: background-color 0.2s ease-in, box-shadow 0.2s ease-in, stroke 0.2s ease-in, fill 0.2s ease-in;
+
+      &:focus {
+        background-color: #FFF2ED;
+        box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+      }
+
+      &:hover {
+        background-color: $orange;
+      }
+
+      &:hover .social__icon {
+        stroke: $bg;
+        fill: $bg;
+      }
+
+      &:active {
+        background-color: #FFF2ED;
+        box-shadow: none;
+      }
+
+      &:active .social__icon {
+        stroke: $orange;
+        fill: $orange
+      }
+    }
+
+    &__icon {
+      stroke: currentColor;
+      fill: $accent;
+      width: 21px;
+      height: 21px;
+    }
+  }
+
+  .footer-bottom {
+    padding: 30px 0;
+    border-top: 1px solid rgba(194, 194, 194, 0.2);
+    text-align: center;
+    font-size: 14px;
+    line-height: 100%;
+  }
+}

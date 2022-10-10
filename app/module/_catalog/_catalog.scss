@@ -1,0 +1,336 @@
+.catalog {
+  .catalog-select {
+    display: flex;
+    justify-content: space-between;
+
+    &__sort {
+      margin-right: 14px;
+    }
+  }
+
+  .jq-selectbox__select {
+    display: flex;
+    align-items: center;
+    height: 47px;
+    padding: 15px 41px 15px 15px;
+    border: 1px solid #C2C2C2;
+    box-shadow: none;
+    border-radius: 3px;
+    color: $accent;
+    background: transparent;
+    transition: border 0.2s ease, color 0.2s ease;
+
+    &:hover {
+      border: 1px solid $orange;
+
+      .jq-selectbox__select-text {
+        color: $orange
+      }
+
+      .jq-selectbox__trigger-arrow {
+        background-image: url('../images/icons/chevron-downor.svg');
+      }
+    }
+  }
+
+  .focused .jq-selectbox__select {
+    border: 1px solid $orange;
+    border-radius: 3px;
+    transition: border 0.2s ease, border-radius 0.2s ease;
+  }
+
+  .jq-selectbox__select-text {
+    font-size: 14px;
+    line-height: 120%;
+    letter-spacing: 3%;
+    @extend %rubik-400;
+    transition: color 0.2s ease;
+  }
+
+  .jq-selectbox__trigger {
+    border-left: none;
+  }
+
+  .jq-selectbox__trigger-arrow {
+    position: absolute;
+    top: 17px;
+    right: 11px;
+    width: 11px;
+    height: 11px;
+    border: none;
+    background-image: url('../images/icons/chevron-down.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .catalog-wrapper {
+    display: flex;
+    margin-bottom: 120px;
+  }
+
+  .catalog-sidebar {
+    max-width: 270px;
+    width: 100%;
+    margin-right: 30px;
+  }
+
+  .catalog-category {
+
+    &__menu-item {
+      font-size: 18px;
+      line-height: 130%;
+      letter-spacing: 0.03em;
+
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
+    }
+
+    &__link {
+      transition: color 0.2s ease, box-shadow 0.2s ease, border-radius 0.2s ease;
+
+      &:hover {
+        color: $orange
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+        border-radius: 5px;
+      }
+
+      &:active {
+        box-shadow: none;
+        color: inherit;
+        text-shadow: 2px 2px 5px rgba(54, 56, 83, 0.5);
+      }
+    }
+  }
+
+  .catalog-offers {
+    &__label {
+      display: flex;
+      align-items: center;
+      padding-left: 36px;
+      @extend %sidebar-text;
+      position: relative;
+      cursor: pointer;
+      line-height: 130%;
+
+      &:not(:last-child) {
+        margin-bottom: 13px;
+      }
+
+      &:hover {
+        .catalog-offers__checkbox {
+          transition: border 0.2s ease, color 0.2s ease, border-radius 0.2s ease;
+          border: 1px solid $orange;
+          border-radius: 3px;
+        }
+
+        .catalog-offers__text {
+          transition: border 0.2s ease, color 0.2s ease, border-radius 0.2s ease;
+          color: $orange;
+        }
+      }
+
+      &:focus {
+        .catalog-offers__text {
+          color: inherit;
+        }
+      }
+    }
+
+    &__input {
+      @extend %checkbox-hidden;
+
+      &:checked+.catalog-offers__checkbox {
+        background-image: url('../images/icons/vector.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        border: 1px solid $title;
+        border-radius: 3px;
+
+        &+.catalog-offers__text {
+          color: inherit;
+        }
+      }
+    }
+
+    &__checkbox {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      left: 1px;
+      top: 1px;
+      border: 1px solid $silver100;
+      border-radius: 3px;
+      background-color: #FAEDED;
+    }
+  }
+
+  .catalog-price {
+    &__filter {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    .catalog-price__box {
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      line-height: 100%;
+
+      &:not(:last-child) {
+        margin-right: 21px;
+      }
+    }
+
+    &__min,
+    &__max {
+      max-width: 70px;
+      text-align: center;
+      padding: 12px 0;
+      background-color: #FAEDED;
+      border: 1px solid #ECECEC;
+      border-radius: 3px;
+      transition: border 0.2s ease-in, border-radius 0.2s ease-in;
+
+      &:focus {
+        border: 1px solid #FF6838;
+        border-radius: 3px;
+      }
+    }
+
+    .catalog-price__walut {
+      padding-left: 5px;
+    }
+
+    .catalog-price__from,
+    .catalog-price__in {
+      margin-right: 5px;
+    }
+
+    .irs--flat .irs-from,
+    .irs--flat .irs-to,
+    .irs--flat .irs-single,
+    .irs--flat .irs-min,
+    .irs--flat .irs-max {
+      display: none;
+    }
+
+    .irs--flat .irs-line {
+      top: 30px;
+      height: 2px;
+      background-color: $silver100;
+    }
+
+    .irs--flat .irs-bar {
+      top: 30px;
+      height: 2px;
+      background-color: $orange;
+    }
+
+    .irs--flat .irs-handle {
+      top: 22px;
+      width: 18px;
+      height: 18px;
+      background-color: $orange;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .irs--flat .irs-handle>i:first-child {
+      display: none;
+    }
+
+    .irs--flat {
+      height: 40px;
+    }
+  }
+
+  &__menu-block {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    margin-bottom: 60px;
+  }
+
+  .pagination {
+
+    &__list {
+      display: flex;
+    }
+
+    &__arrow {
+      width: 11px;
+      height: 18px;
+    }
+
+    &__item {
+
+      &:not(:last-child) {
+        margin-right: 6px;
+      }
+    }
+
+    &__prev {
+      margin-right: 6px;
+      fill: $silverdecor;
+    }
+
+    &__next {
+      margin-left: 6px;
+      fill: $accent;
+    }
+
+    &__prev,
+    &__next {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #FAEDED;
+      border-radius: 3px;
+      width: 48px;
+      height: 48px;
+      transition: border 0.2s ease-in;
+
+      &:hover {
+        border: 1px solid $orange;
+      }
+    }
+
+    &__link--active {
+      border: 1px solid $accent;
+      border-radius: 3px;
+    }
+
+    &__link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #FAEDED;
+      border-radius: 3px;
+      width: 48px;
+      height: 48px;
+      letter-spacing: 0.03em;
+      transition: border-radius 0.2s ease-in, background-color 0.2s ease-in, box-shadow 0.2s ease-in;
+
+      &:hover {
+        background-color: $orange;
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 2px $orange;
+        border-radius: 3px
+      }
+
+      &:active {
+        background-color: #FAEDED;
+        box-shadow: inset 0 -1px 4px 2px rgba(0, 0, 0, 0.15);
+        border-radius: 3px
+      }
+    }
+
+  }
+}

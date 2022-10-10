@@ -1,0 +1,63 @@
+.category {
+  margin-bottom: 120px;
+  text-align: center;
+  line-height: 1.5;
+
+  &__list {
+    display: flex;
+    justify-content: left;
+    margin-bottom: 45px;
+
+    li:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  &__filter {
+    display: flex;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    padding: 13px 32px;
+    border-radius: 6px;
+    font-size: 20px;
+    line-height: 130%;
+
+    svg {
+      margin-right: 10px;
+    }
+  }
+
+
+
+  &__more {
+    font-size: 20px;
+    line-height: 150%;
+    text-decoration: underline;
+    transition: color 0.2s ease-in, background-color 0.2s ease-in, box-shadow 0.2s ease-in, border-radius 0.2s ease-in, text-shadow 0.2s ease-in, text-decoration 0.2s ease-in;
+
+    &:focus,
+    &:hover,
+    &:active {
+      text-decoration: none;
+    }
+
+    &:focus {
+      background-color: rgba(255, 255, 255, 0.01);
+      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+      border-radius: 5px;
+    }
+
+    &:hover {
+      color: $orange;
+    }
+
+    &:active {
+      text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
+      box-shadow: none;
+      color: $accent;
+    }
+  }
+}

@@ -1,0 +1,187 @@
+.coments {
+  padding-top: 120px;
+  margin-bottom: 123px;
+  position: relative;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 45px;
+  }
+
+  .coments-item {
+    max-width: 990px;
+    margin: 0 auto;
+    line-height: 1.5;
+
+    &__wrapper {
+      display: flex;
+      align-items: center;
+    }
+
+    &__images {
+      border-radius: 50%;
+      margin-right: 80px;
+    }
+
+    &__name {
+      display: block;
+    }
+
+    &__quote {
+      font-family: "Rubik";
+      max-width: 570px;
+      font-weight: 400;
+      font-size: 20px;
+      font-style: italic;
+      margin-bottom: 30px;
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 24px;
+        height: 24px;
+        background-image: url('../images/icon/quote.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        transform: translate(-40px, 7px);
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 24px;
+        height: 24px;
+        background-image: url('../images/icon/quotedown.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        transform: translate(-404px, -15px);
+      }
+    }
+
+    &__name {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 130%;
+      color: $orange;
+      margin-bottom: 15px;
+    }
+
+    &__food {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 130%;
+    }
+  }
+
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 44px;
+
+    li {
+      button {
+        font-size: 0;
+        background-color: #C2C2C2;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        transition: background-color 0.2s ease-in, box-shadow 0.2s ease-in;
+
+        &:focus {
+          box-shadow: 0 0 0 2px $orange;
+        }
+
+        &:hover {
+          background: #FFF2ED;
+          box-shadow: 0 0 0 2px rgba(255, 122, 80, 0.7);
+        }
+
+        &:active {
+          background-color: #FFAE94;
+        }
+      }
+
+      &:not(:last-child) {
+        margin-right: 15px;
+      }
+
+      &.slick-active {
+        button {
+          background-color: $orange;
+        }
+      }
+    }
+  }
+
+  .slick-arrow {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: -12px;
+    left: 49%;
+    z-index: 1;
+    border: 3px solid #C2C2C2;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+
+    &__img {
+      &:focus {
+        path {
+          fill: #C2C2C2;
+          transition: fill 0.2s ease-in;
+        }
+      }
+
+      &:hover {
+        path {
+          fill: #FFAE94;
+          transition: fill 0.2s ease-in;
+        }
+      }
+
+      &:active {
+        path {
+          fill: $orange;
+          transition: fill 0.2s ease-in;
+        }
+      }
+    }
+  }
+
+  .slick-next {
+    transform: translateX(83px);
+  }
+
+  .slick-prev {
+    transform: translateX(-100px);
+  }
+
+  .slick-next,
+  .slick-prev {
+    transition: background-color 0.2s ease-in, border 0.2s ease-in, box-shadow 0.2s ease-in;
+
+    &:focus {
+      background-color: rgba(255, 255, 255, 0.01);
+      border: 3px solid #C2C2C2;
+      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+    }
+
+    &:hover {
+      background-color: #FFF2ED;
+      border: 3px solid #FFAE94;
+    }
+
+    &:active {
+      background-color: #FFF2ED;
+      border: 3px solid #FFF2ED;
+      box-shadow: none;
+    }
+  }
+}

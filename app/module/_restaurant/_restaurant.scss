@@ -1,8 +1,36 @@
+@mixin r($width) {
+  @media (max-width: #{$width}px) {
+    @content;
+  }
+}
+
 .restaurant {
   padding-top: 120px;
+
+  @include r(992) {
+    padding-top: 100px;
+  }
+
+  @include r(768) {
+    padding-top: 80px;
+  }
+
+  @include r(576) {
+    padding-top: 40px;
+  }
 
   &__title {
     margin-bottom: 45px;
     text-align: center;
+
+    @include r(576) {
+      font-size: 30px;
+      margin-bottom: 30px;
+    }
+
+    @include r(375) {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
   }
 }

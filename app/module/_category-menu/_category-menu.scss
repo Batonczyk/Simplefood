@@ -1,8 +1,26 @@
+@mixin r($width) {
+  @media (max-width: #{$width}px) {
+    @content;
+  }
+}
+
 .category-menu {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 30px;
   margin-bottom: 60px;
+
+  @include r(992) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  @include r(768) {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 5px;
+    row-gap: 10px;
+    margin-bottom: 25px;
+  }
 
   &__item {
     max-width: 210px;
@@ -20,6 +38,10 @@
     &:hover {
       box-shadow: 0 0 0 1px #FF6838;
       border-radius: 5px;
+    }
+
+    @include r(768) {
+      max-width: 100%;
     }
   }
 

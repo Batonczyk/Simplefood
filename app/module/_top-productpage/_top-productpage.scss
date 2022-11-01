@@ -1,6 +1,16 @@
+@mixin r($width) {
+  @media (max-width: #{$width}px) {
+    @content;
+  }
+}
+
 .top {
   margin-bottom: 59px;
   background-color: rgba(255, 122, 80, 0.1);
+
+  @include r(576) {
+    margin-bottom: 30px;
+  }
 
   .breadcrumbs {
     display: flex;
@@ -14,6 +24,12 @@
       color: #505050;
       letter-spacing: 0.03em;
       position: relative;
+
+      @include r(576) {
+        &:nth-child(2) {
+          display: none;
+        }
+      }
 
       &:not(:last-child) {
         padding-right: 17px;

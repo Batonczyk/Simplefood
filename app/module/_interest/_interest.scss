@@ -1,5 +1,34 @@
+@mixin r($width) {
+  @media (max-width: #{$width}px) {
+    @content;
+  }
+}
+
 .interest {
   margin-bottom: 112px;
+
+  @include r(768) {
+    margin-bottom: 80px;
+  }
+
+  @include r(576) {
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    @include r(768) {
+      margin-bottom: 30px;
+      font-size: 30px;
+    }
+
+    @include r(576) {
+      font-size: 25px;
+    }
+
+    @include r(376) {
+      font-size: 20px;
+    }
+  }
 
   &__item {
     max-width: 0;
@@ -15,6 +44,34 @@
     .slick-track {
       left: 16px;
       top: 1px;
+
+      @include r(1200) {
+        left: 1px;
+      }
+    }
+
+    .slick-dots {
+      display: flex;
+      justify-content: center;
+      padding-top: 25px;
+
+      li {
+        &:not(:last-child) {
+          margin-right: 15px;
+        }
+      }
+
+      button {
+        font-size: 0;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: $silverdecor;
+      }
+
+      .slick-active button {
+        background-color: $orange;
+      }
     }
 
     .slick-list {
@@ -43,5 +100,24 @@
       transform: translate(28px, 3px);
     }
 
+  }
+
+  .interest-box__item {
+    @include r(1200) {
+      max-width: 300px;
+    }
+
+    @include r(992) {
+      max-width: 350px;
+    }
+
+    @include r(768) {
+      max-width: 250px;
+    }
+
+    @include r(576) {
+      max-width: 170px;
+      margin-right: 5px;
+    }
   }
 }

@@ -1,10 +1,90 @@
+@mixin r($width) {
+  @media (max-width: #{$width}px) {
+    @content;
+  }
+}
+
 .catalog {
+
   .catalog-select {
     display: flex;
     justify-content: space-between;
 
+    @include r(992) {
+      margin-bottom: 30px;
+    }
+
+    &__filter {}
+
+    @include r(992) {
+      flex-wrap: wrap;
+      justify-content: start;
+    }
+
+    &__title {
+      @include r(992) {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      @include r(768) {
+        font-size: 30px;
+      }
+
+      @include r(576) {
+        font-size: 24px;
+      }
+    }
+
     &__sort {
       margin-right: 14px;
+    }
+
+    .catalog-btn {
+      display: none;
+      overflow: hidden;
+
+      @include r(992) {
+        display: block;
+        margin-right: 10px;
+      }
+
+      &__svg {
+        width: 47px;
+        height: 47px;
+        fill: $orange;
+      }
+    }
+  }
+
+  .catalog-bgmenu {
+    display: none;
+
+    &__close {
+      background-color: #FAEDED;
+    }
+
+    @include r(992) {
+      display: block;
+      position: absolute;
+      padding: 80px 50px 0 0;
+      width: 320px;
+      height: 100%;
+      top: 0;
+      left: 0;
+      transform: translateX(-200%);
+      background-color: $bg;
+      z-index: 3;
+      overflow: scroll;
+      transition: transform 0.2s ease, background-color 0.2s ease;
+
+      &.catalog-bgmenu--active {
+        position: fixed;
+        display: block;
+        z-index: 10;
+        transform: translateX(0%);
+        transition: transform 0.2s ease, background-color 0.2s ease;
+      }
     }
   }
 
@@ -37,6 +117,11 @@
     border: 1px solid $orange;
     border-radius: 3px;
     transition: border 0.2s ease, border-radius 0.2s ease;
+  }
+
+  .jq-selectbox__dropdown {
+    background-color: #FAEDED;
+    padding: 6px;
   }
 
   .jq-selectbox__select-text {
@@ -72,6 +157,10 @@
     max-width: 270px;
     width: 100%;
     margin-right: 30px;
+
+    @include r(992) {
+      display: none;
+    }
   }
 
   .catalog-category {
@@ -173,6 +262,7 @@
       display: flex;
       align-items: center;
       justify-content: space-around;
+      z-index: -1;
     }
 
     .catalog-price__box {
@@ -254,6 +344,17 @@
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
     margin-bottom: 60px;
+
+    @include r(768) {
+      grid-template-columns: repeat(3, 1fr);
+      margin-bottom: 45px;
+    }
+
+    @include r(576) {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 5px;
+      margin-bottom: 30px;
+    }
   }
 
   .pagination {
@@ -271,6 +372,14 @@
 
       &:not(:last-child) {
         margin-right: 6px;
+      }
+
+      @include r(576) {
+
+        &:nth-child(2),
+        &:nth-child(4) {
+          display: none;
+        }
       }
     }
 

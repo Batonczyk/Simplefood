@@ -1,11 +1,40 @@
+@mixin r($width) {
+  @media (max-width: #{$width}px) {
+    @content;
+  }
+}
+
 .coments {
   padding-top: 120px;
   margin-bottom: 123px;
   position: relative;
 
+  @include r(768) {
+    padding-top: 80px;
+    margin-bottom: 60px;
+  }
+
+  @include r(576) {
+    margin-bottom: 0;
+  }
+
+  @include r(376) {
+    padding-top: 40px;
+  }
+
   &__title {
     text-align: center;
     margin-bottom: 45px;
+
+    @include r(576) {
+      font-size: 30px;
+      margin-bottom: 30px;
+    }
+
+    @include r(375) {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
   }
 
   .coments-item {
@@ -16,15 +45,79 @@
     &__wrapper {
       display: flex;
       align-items: center;
+
+      @include r(768) {
+        flex-direction: column;
+      }
     }
 
     &__images {
       border-radius: 50%;
       margin-right: 80px;
+
+      @include r(992) {
+        margin-right: 40px;
+      }
+
+      @include r(768) {
+        width: 40%;
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+
+      @include r(576) {
+        width: 30%;
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+
+      @include r(375) {
+        max-width: 100px;
+        margin-bottom: 28px;
+      }
     }
 
-    &__name {
-      display: block;
+    &__text {
+      position: relative;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 24px;
+        height: 20px;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+
+      &::before {
+        background-image: url('../../images/icons/quotedown.svg');
+        transform: translate(-40px, 2px);
+
+        @include r(375) {
+          transform: translate(-33px, -7px);
+        }
+      }
+
+      &::after {
+        background-image: url('../../images/icons/quote.svg');
+        transform: translate(-404px, -112px);
+
+        @include r(768) {
+          right: -437px;
+        }
+
+        @include r(576) {
+          right: -430px;
+        }
+
+        @include r(375) {
+          right: -437px;
+          bottom: -27px;
+
+        }
+      }
     }
 
     &__quote {
@@ -34,40 +127,33 @@
       font-size: 20px;
       font-style: italic;
       margin-bottom: 30px;
-      position: relative;
 
-      &::before {
-        content: '';
-        position: absolute;
-        display: block;
-        width: 24px;
-        height: 24px;
-        background-image: url('../images/icon/quote.svg');
-        background-repeat: no-repeat;
-        background-size: contain;
-        transform: translate(-40px, 7px);
+      @include r(768) {
+        max-width: 420px;
+        font-size: 18px;
+        margin-bottom: 20px;
       }
 
-      &::after {
-        content: '';
-        position: absolute;
-        display: block;
-        width: 24px;
-        height: 24px;
-        background-image: url('../images/icon/quotedown.svg');
-        background-repeat: no-repeat;
-        background-size: contain;
-        transform: translate(-404px, -15px);
+      @include r(576) {
+        max-width: 267px;
+        font-size: 14px;
+        margin-bottom: 20px;
       }
     }
 
     &__name {
+      display: block;
       font-style: normal;
       font-weight: 500;
       font-size: 20px;
       line-height: 130%;
       color: $orange;
       margin-bottom: 15px;
+
+      @include r(375) {
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
     }
 
     &__food {
@@ -82,6 +168,10 @@
     display: flex;
     justify-content: center;
     margin-top: 44px;
+
+    @include r(375) {
+      margin-top: 35px;
+    }
 
     li {
       button {
@@ -103,6 +193,10 @@
 
         &:active {
           background-color: #FFAE94;
+        }
+
+        @include r(768) {
+          display: none;
         }
       }
 
@@ -131,6 +225,18 @@
     width: 40px;
     height: 40px;
 
+    @include r(768) {
+      top: 25%;
+    }
+
+    @include r(576) {
+      top: 13%;
+    }
+
+    @include r(375) {
+      top: 7%;
+    }
+
     &__img {
       &:focus {
         path {
@@ -157,10 +263,34 @@
 
   .slick-next {
     transform: translateX(83px);
+
+    @include r(768) {
+      transform: translateX(225px);
+    }
+
+    @include r(576) {
+      transform: translateX(115px);
+    }
+
+    @include r(375) {
+      transform: translateX(101px);
+    }
   }
 
   .slick-prev {
     transform: translateX(-100px);
+
+    @include r(768) {
+      transform: translateX(-252px);
+    }
+
+    @include r(576) {
+      transform: translateX(-140px);
+    }
+
+    @include r(375) {
+      transform: translateX(-133px);
+    }
   }
 
   .slick-next,

@@ -14,7 +14,7 @@
 
 <body>
 
- <header class="header">
+ <header class="header-nav">
   <div class="container">
 
     <nav class="menu">
@@ -53,8 +53,80 @@
           <span class="sr-only">корзина</span>
         </li>
       </ul>
+      <button class="menu-burger">
+        <span class="burger"></span>
+        <span class="sr-only">меню</span>
+      </button>
+
+      <div class="burger-nav">
+        <a class="logo burger-nav__logo" href="">
+          <img class="logo__image burger-nav__img" src="images/logo.svg" alt="логотип Симпл Фуд">
+        </a>
+
+        <button class="close">
+          <svg class="close__svg" fill="none">
+            <use xlink:href="images/sprite.svg#closebtn"></use>
+          </svg>
+        </button>
+
+        <ul class="burger-menu">
+          <li class="menu__item burger-menu__item active #home">
+            <a class="menu__link burger-menu__link" href="#">Главная</a>
+          </li>
+          <li class="menu__item burger-menu__item #product">
+            <a class="menu__link burger-menu__link" href="#">Блюда</a>
+          </li>
+          <li class="menu__item burger-menu__item #contact">
+            <a class="menu__link burger-menu__link" href="#">Контакты</a>
+          </li>
+        </ul>
+        <ul class="burger-nav__contact">
+          <address class="footer-contacts__address">
+            <li class="footer-contacts__item footer-contacts__item--location">
+              <a class="footer-contacts__link" href="" target="_blank">
+                ул. Т.Г.Шевченко, 1
+              </a>
+            </li>
+            <li class="footer-contacts__item footer-contacts__item--calling">
+              <a class="footer-contacts__link" href="tel:380501112233" target="_blank">
+                380501112233
+              </a>
+            </li>
+            <li class="footer-contacts__item footer-contacts__item--mail">
+              <a class="footer-contacts__link" href="mailto:support@sfood.com" target="_blank">
+                support@sfood.com
+              </a>
+            </li>
+            <ul class="social burger-links">
+              <li class="social__links burger-link__link">
+                <a class="social__link burger-link__fs" href="">
+                  <svg class="social__icon burger-link__icon">
+                    <use xlink:href="images/sprite.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__links burger-link__link">
+                <a class="social__link burger-link__tw" href="">
+                  <svg class="social__icon burger-link__icon">
+                    <use xlink:href="images/sprite.svg#twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__links burger-link__link">
+                <a class="social__link burger-link__inst" href="">
+                  <svg class="social__icon burger-link__icon">
+                    <use xlink:href="images/sprite.svg#instagram"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </address>
+        </ul>
+      </div>
 
     </nav>
+
+    <div class="burger-overlay"></div>
 
   </div>
 
@@ -78,13 +150,18 @@
     </ul>
   </div>
 </div>
-<section class="catalog">
+<section class="catalog" id="1">
   <div class="container">
 
     <div class="catalog-select">
-      <h4 class="title">
+      <h4 class="title catalog-select__title">
         Каталог продуктов
       </h4>
+      <button class="catalog-btn">
+        <svg class="catalog-btn__svg">
+          <use xlink:href="images/sprite.svg#ic-filter"></use>
+        </svg>
+      </button>
       <form class="catalog-select__filter" action="#">
         <select class="catalog-select__sort select-style">
           <option value="">По названию</option>
@@ -101,6 +178,108 @@
           <option value="">по 3</option>
         </select>
       </form>
+    </div>
+
+    <div class="catalog-bgmenu">
+      <button class="close">
+        <svg class="close__svg" fill="none">
+          <use xlink:href="images/sprite.svg#closebtn"></use>
+        </svg>
+      </button>
+      <div class="catalog-category sidebar__items">
+        <h4 class="catalog-category__title sidebar__title">
+          Категории
+        </h4>
+        <ul class="catalog-category__menu sidebar__item">
+          <li class="catalog-category__menu-item active">
+            <a class="catalog-category__link" href="#">Бургеры</a>
+          </li>
+          <li class="catalog-category__menu-item">
+            <a class="catalog-category__link" href="#">
+              Пицца
+            </a>
+          </li>
+          <li class="catalog-category__menu-item">
+            <a class="catalog-category__link" href="#">
+              Сендвичи
+            </a>
+          </li>
+          <li class="catalog-category__menu-item">
+            <a class="catalog-category__link" href="#">
+              Азиатская кухня
+            </a>
+          </li>
+          <li class="catalog-category__menu-item">
+            <a class="catalog-category__link" href="#">
+              Сеты
+            </a>
+          </li>
+          <li class="catalog-category__menu-item">
+            <a class="catalog-category__link" href="#">
+              Европейская кухня
+            </a>
+          </li>
+          <li class="catalog-category__menu-item">
+            <a class="catalog__link" href="#">
+              Напитки
+            </a>
+          </li>
+          <li class="catalog-category__menu-item">
+            <a class="catalog-category__link" href="#">
+              Алкоголь
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="catalog-offers sidebar__items">
+        <h4 class="catalog-offers__title sidebar__title">
+          Предложения
+        </h4>
+        <form class="catalog-offers__form sidebar__item" action="#">
+          <label class="catalog-offers__label">
+            <input class="catalog-offers__input" type="checkbox">
+            <span class="catalog-offers__checkbox">
+            </span>
+            <span class="catalog-offers__text">Со скидкой</span>
+          </label>
+          <label class="catalog-offers__label">
+            <input class="catalog-offers__input" type="checkbox" checked>
+            <span class="catalog-offers__checkbox">
+            </span>
+            <span class="catalog-offers__text">Новинка</span>
+          </label>
+          <label class="catalog-offers__label">
+            <input class="catalog-offers__input" type="checkbox">
+            <span class="catalog-offers__checkbox">
+            </span>
+            <span class="catalog-offers__text">Хит</span>
+          </label>
+        </form>
+      </div>
+
+      <div class="catalog-price sidebar__items">
+        <h4 class="catalog-price__title sidebar__title">
+          Цена
+        </h4>
+        <form class="catalog-price__form sidebar__item " action="#">
+          <div class="catalog-price__filter">
+            <div class="catalog-price__box">
+              <label class="catalog-price__label sr-only" for=""></label>
+              <span class="catalog-price__from">от</span>
+              <input class="catalog-price__min" type="text" value="0">
+              <span class="catalog-price__walut">₴</span>
+            </div>
+            <div class="catalog-price__box">
+              <label class="catalog-price__label sr-only" for="#"></label>
+              <span class="catalog-price__in">до</span>
+              <input class="catalog-price__max" type="text" value="1000">
+              <span class="catalog-price__walut">₴</span>
+            </div>
+          </div>
+          <input class="catalog-price__input" type="text" data-min="0" data-max="10000" data-from="373" data-to="8818">
+        </form>
+      </div>
     </div>
 
     <div class="catalog-wrapper">

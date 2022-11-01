@@ -1,3 +1,9 @@
+@mixin r($width) {
+  @media (max-width: #{$width}px) {
+    @content;
+  }
+}
+
 .footer {
   line-height: 1.3;
 
@@ -6,6 +12,15 @@
     grid-template-columns: 200px 153px 91px 187px 195px;
     column-gap: 70px;
     margin-bottom: 60px;
+
+    @include r(1200) {
+      column-gap: 30px;
+    }
+
+    @include r(992) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   .form {
@@ -13,9 +28,18 @@
     flex-direction: column;
     justify-content: space-evenly;
 
+    @include r(992) {
+      order: -1;
+      margin-bottom: 30px;
+    }
+
     &__logo {
       display: inline-block;
       margin-bottom: 18px;
+
+      @include r(992) {
+        margin-bottom: 27px;
+      }
     }
 
     &__item {
@@ -105,6 +129,10 @@
     font-size: 18px;
     letter-spacing: 0.01em;
 
+    @include r(992) {
+      margin-bottom: 20px;
+    }
+
     &__item {
       &:not(:last-child) {
         margin-bottom: 20px;
@@ -120,101 +148,9 @@
     }
   }
 
-  .footer-contacts {
-    &__address {
-      font-style: normal;
-    }
-
-    &__item {
-      padding-left: 31px;
-      position: relative;
-
-      &::before {
-        content: '';
-        display: block;
-        position: absolute;
-        width: 24px;
-        height: 24px;
-        top: 6px;
-        left: 0;
-        background-repeat: no-repeat;
-        background-size: contain;
-      }
-
-      &--location::before {
-        background-image: url('../images/icons/location.svg');
-      }
-
-      &--calling::before {
-        background-image: url('../images/icons/calling.svg');
-      }
-
-      &--mail::before {
-        background-image: url('../images/icons/message.svg');
-      }
-
-      &:not(:last-child) {
-        margin-bottom: 15px;
-        line-height: 32px;
-      }
-    }
-
-    &__link {
-      transition: color 0.2s ease-in;
-
-      &:hover {
-        color: $orange;
-      }
-    }
-  }
-
-  .social {
-    display: flex;
-
-    &__links {
-      &:not(:last-child) {
-        margin-right: 10px;
-      }
-    }
-
-    &__link {
-      display: flex;
-      align-items: center;
-      border-radius: 50%;
-      padding: 10px;
-      background-color: $silver100;
-      transition: background-color 0.2s ease-in, box-shadow 0.2s ease-in, stroke 0.2s ease-in, fill 0.2s ease-in;
-
-      &:focus {
-        background-color: #FFF2ED;
-        box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
-      }
-
-      &:hover {
-        background-color: $orange;
-      }
-
-      &:hover .social__icon {
-        stroke: $bg;
-        fill: $bg;
-      }
-
-      &:active {
-        background-color: #FFF2ED;
-        box-shadow: none;
-      }
-
-      &:active .social__icon {
-        stroke: $orange;
-        fill: $orange
-      }
-    }
-
-    &__icon {
-      stroke: currentColor;
-      fill: $accent;
-      width: 21px;
-      height: 21px;
+  .footer-map {
+    @include r(992) {
+      margin-bottom: 0;
     }
   }
 
@@ -224,5 +160,112 @@
     text-align: center;
     font-size: 14px;
     line-height: 100%;
+
+    @include r(992) {
+      padding: 20px;
+    }
+  }
+}
+
+.footer-contacts {
+  @include r(992) {
+    order: -1;
+    margin-bottom: 30px;
+  }
+
+  &__address {
+    font-style: normal;
+  }
+
+  &__item {
+    padding-left: 31px;
+    position: relative;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      top: 6px;
+      left: 0;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    &--location::before {
+      background-image: url('../images/icons/location.svg');
+    }
+
+    &--calling::before {
+      background-image: url('../images/icons/calling.svg');
+    }
+
+    &--mail::before {
+      background-image: url('../images/icons/message.svg');
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+      line-height: 32px;
+    }
+  }
+
+  &__link {
+    transition: color 0.2s ease-in;
+
+    &:hover {
+      color: $orange;
+    }
+  }
+}
+
+.social {
+  display: flex;
+
+  &__links {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: $silver100;
+    transition: background-color 0.2s ease-in, box-shadow 0.2s ease-in, stroke 0.2s ease-in, fill 0.2s ease-in;
+
+    &:focus {
+      background-color: #FFF2ED;
+      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+    }
+
+    &:hover {
+      background-color: $orange;
+    }
+
+    &:hover .social__icon {
+      stroke: $bg;
+      fill: $bg;
+    }
+
+    &:active {
+      background-color: #FFF2ED;
+      box-shadow: none;
+    }
+
+    &:active .social__icon {
+      stroke: $orange;
+      fill: $orange
+    }
+  }
+
+  &__icon {
+    stroke: currentColor;
+    fill: $accent;
+    width: 21px;
+    height: 21px;
   }
 }

@@ -1,22 +1,80 @@
+@mixin r($width) {
+  @media (max-width: #{$width}px) {
+    @content;
+  }
+}
+
 .mobile-box {
   display: flex;
   margin-bottom: 120px;
   line-height: 1.5;
 
+  @include r(992) {
+    align-items: center;
+    margin-bottom: 80px;
+  }
+
+  @include r(768) {
+    justify-content: center;
+    margin-bottom: 60px;
+  }
+
+  @include r(576) {
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+
   &__item {
     max-width: 540px;
     margin-right: 60px;
+
+    @include r(768) {
+      margin-right: 0;
+    }
+  }
+
+  &__image {
+    @include r(992) {
+      max-width: 370px;
+      height: fit-content;
+    }
+
+    @include r(768) {
+      display: none;
+    }
   }
 
   &__title {
     padding-top: 50px;
     margin-bottom: 45px;
+
+    @include r(992) {
+      font-size: 28px;
+      padding-top: 45px;
+    }
+
+    @include r(768) {
+      font-size: 28px;
+      padding-top: 0;
+      margin-bottom: 30px;
+    }
+
+    @include r(568) {
+      font-size: 24px;
+      padding-top: 0;
+      margin-bottom: 15px;
+    }
   }
 
   &__text {
     margin-bottom: 30px;
     font-size: 20px;
     opacity: 0.9;
+
+    @include r(568) {
+      font-size: 14px;
+      margin-bottom: 14px;
+    }
   }
 
   &__links {

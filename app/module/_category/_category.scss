@@ -1,20 +1,81 @@
+@mixin r($width) {
+  @media (max-width: #{$width}px) {
+    @content;
+  }
+}
+
 .category {
   margin-bottom: 120px;
   text-align: center;
   line-height: 1.5;
 
+  @include r(992) {
+    margin-bottom: 80px;
+  }
+
+  @include r(768) {
+    margin-bottom: 65px;
+  }
+
+  @include r(375) {
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    @include r(992) {
+      margin-bottom: 30px;
+      font-size: 30px;
+    }
+
+    @include r(992) {
+      font-size: 24px;
+    }
+
+    @include r(576) {
+      margin-bottom: 20px;
+    }
+  }
+
   &__list {
     display: flex;
     justify-content: left;
     margin-bottom: 45px;
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    @include r(992) {
+      margin-bottom: 30px;
+    }
 
     li:not(:last-child) {
       margin-right: 20px;
+
+      @include r(768) {
+        margin-right: 20px;
+      }
+
+      @include r(576) {
+        margin-right: 10px;
+      }
+    }
+
+    @include r(768) {
+      margin-bottom: 30px;
     }
   }
 
   &__filter {
     display: flex;
+    min-width: fit-content;
+    border-radius: 5px;
+    box-shadow: 0px 0px 0px 1px #ECECEC;
+
+    @include r(768) {
+      margin-right: 10px;
+    }
   }
 
   &__btn {
@@ -25,12 +86,33 @@
     font-size: 20px;
     line-height: 130%;
 
-    svg {
-      margin-right: 10px;
+    @include r(992) {
+      padding: 13px 20px;
+      font-size: 18px;
+    }
+
+    @include r(768) {
+      padding: 11px 16px;
+      font-size: 14px;
     }
   }
 
+  &__svg {
+    width: 44px;
+    height: 44px;
+    margin-right: 10px;
 
+    @include r(768) {
+      width: 30px;
+      height: 30px;
+      margin-right: 5px;
+    }
+
+    @include r(576) {
+      width: 20px;
+      height: 20px;
+    }
+  }
 
   &__more {
     font-size: 20px;

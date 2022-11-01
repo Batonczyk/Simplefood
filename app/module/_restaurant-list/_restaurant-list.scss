@@ -1,7 +1,48 @@
+@mixin r($width) {
+  @media (max-width: #{$width}px) {
+    @content;
+  }
+}
+
 .restaurant-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
+
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+
+    li {
+      &:not(:last-child) {
+        margin-right: 15px;
+      }
+    }
+
+    .slick-active button {
+      background-color: $orange;
+    }
+
+    button {
+      font-size: 0;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: $silverdecor;
+    }
+  }
+
+  @include r(992) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include r(576) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  @include r(576) {
+    gap: 20px;
+  }
 
   &__content {
     background-color: $bg;
@@ -18,6 +59,14 @@
   &__image {
     object-fit: contain;
     margin-bottom: 15px;
+
+    @include r(992) {
+      width: 100%;
+    }
+
+    @include r(992) {
+      margin-bottom: 38px;
+    }
   }
 
   &__name {
@@ -26,6 +75,14 @@
     font-size: 24px;
     margin-bottom: 20px;
     line-height: 130%;
+
+    @include r(768) {
+      font-size: 20px;
+    }
+
+    @include r(768) {
+      font-size: 24px;
+    }
   }
 
   &__add {
@@ -59,6 +116,14 @@
     font-size: 18px;
     line-height: 1.6;
     padding-left: 42px;
+
+    @include r(768) {
+      font-size: 16px;
+    }
+
+    @include r(568) {
+      font-size: 18px;
+    }
   }
 
   &__link {

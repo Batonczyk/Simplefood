@@ -1,20 +1,67 @@
+@mixin r($width) {
+  @media (max-width: #{$width}px) {
+    @content;
+  }
+}
+
 .benefits {
   display: flex;
+  justify-content: center;
   align-items: center;
   margin: 0 auto;
   max-width: 1030px;
   line-height: 1.5;
 
+  @include r(768) {
+    background-color: rgba(249, 250, 255, 0.85);
+  }
+
   &__image {
     margin-right: 120px;
+
+    @include r(1200) {
+      margin-right: 75px;
+    }
+
+    @include r(992) {
+      min-width: 350px;
+    }
+
+    @include r(768) {
+      min-width: 345px;
+      margin-right: 0;
+      z-index: -1;
+    }
   }
 
   &__item {
     max-width: 470px;
+
+    @include r(768) {
+      position: absolute;
+      max-width: 400px;
+    }
+
+    @include r(576) {
+      position: absolute;
+      max-width: 355px;
+    }
+
+    @include r(375) {
+      max-width: 345px;
+    }
   }
 
   &__title {
     margin-bottom: 30px;
+
+    @include r(992) {
+      font-size: 30px;
+    }
+
+    @include r(375) {
+      font-size: 24px;
+    }
   }
 
   &__text {
@@ -23,6 +70,18 @@
     font-weight: 400;
     opacity: 0.9;
     margin-bottom: 30px;
+
+    @include r(992) {
+      font-size: 18px;
+    }
+
+    @include r(768) {
+      font-size: 18px;
+    }
+
+    @include r(375) {
+      font-size: 16px;
+    }
   }
 
   &__advantages {
@@ -32,6 +91,23 @@
 
     &:not(:last-child) {
       margin-bottom: 20px;
+
+      @include r(992) {
+        margin-bottom: 18px;
+      }
+    }
+
+    @include r(992) {
+      font-size: 20px;
+    }
+
+    @include r(768) {
+      font-size: 20px;
+    }
+
+    @include r(375) {
+      font-size: 18px;
+      margin-bottom: 15px;
     }
   }
 
@@ -39,6 +115,14 @@
     margin-right: 30px;
     width: 34px;
     height: 34px;
+
+    @include r(768) {
+      margin-right: 20px;
+    }
+
+    @include r(375) {
+      margin-right: 10px;
+    }
   }
 
   .resturant {
@@ -54,6 +138,10 @@
   }
 
   &__btn {
-    font-size: 18px
+    font-size: 18px;
+
+    @include r(375) {
+      font-size: 14px;
+    }
   }
 }

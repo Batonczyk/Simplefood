@@ -14,7 +14,7 @@
 
 <body>
 
-   <header class="header">
+   <header class="header-nav">
   <div class="container">
 
     <nav class="menu">
@@ -53,8 +53,80 @@
           <span class="sr-only">корзина</span>
         </li>
       </ul>
+      <button class="menu-burger">
+        <span class="burger"></span>
+        <span class="sr-only">меню</span>
+      </button>
+
+      <div class="burger-nav">
+        <a class="logo burger-nav__logo" href="">
+          <img class="logo__image burger-nav__img" src="images/logo.svg" alt="логотип Симпл Фуд">
+        </a>
+
+        <button class="close">
+          <svg class="close__svg" fill="none">
+            <use xlink:href="images/sprite.svg#closebtn"></use>
+          </svg>
+        </button>
+
+        <ul class="burger-menu">
+          <li class="menu__item burger-menu__item active #home">
+            <a class="menu__link burger-menu__link" href="#">Главная</a>
+          </li>
+          <li class="menu__item burger-menu__item #product">
+            <a class="menu__link burger-menu__link" href="#">Блюда</a>
+          </li>
+          <li class="menu__item burger-menu__item #contact">
+            <a class="menu__link burger-menu__link" href="#">Контакты</a>
+          </li>
+        </ul>
+        <ul class="burger-nav__contact">
+          <address class="footer-contacts__address">
+            <li class="footer-contacts__item footer-contacts__item--location">
+              <a class="footer-contacts__link" href="" target="_blank">
+                ул. Т.Г.Шевченко, 1
+              </a>
+            </li>
+            <li class="footer-contacts__item footer-contacts__item--calling">
+              <a class="footer-contacts__link" href="tel:380501112233" target="_blank">
+                380501112233
+              </a>
+            </li>
+            <li class="footer-contacts__item footer-contacts__item--mail">
+              <a class="footer-contacts__link" href="mailto:support@sfood.com" target="_blank">
+                support@sfood.com
+              </a>
+            </li>
+            <ul class="social burger-links">
+              <li class="social__links burger-link__link">
+                <a class="social__link burger-link__fs" href="">
+                  <svg class="social__icon burger-link__icon">
+                    <use xlink:href="images/sprite.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__links burger-link__link">
+                <a class="social__link burger-link__tw" href="">
+                  <svg class="social__icon burger-link__icon">
+                    <use xlink:href="images/sprite.svg#twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__links burger-link__link">
+                <a class="social__link burger-link__inst" href="">
+                  <svg class="social__icon burger-link__icon">
+                    <use xlink:href="images/sprite.svg#instagram"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </address>
+        </ul>
+      </div>
 
     </nav>
+
+    <div class="burger-overlay"></div>
 
   </div>
 
@@ -308,7 +380,7 @@
 
       <ul class="interest-box__menu">
         <article class="category-menu__box">
-          <li class="category-menu__item">
+          <li class="category-menu__item interest-box__item">
             <img class="category-menu__images" src="images/burgermenu1.png" alt="Бургер">
             <h5 class="category-menu__title">Чизбургер с листьями салата</h5>
             <span class="category-menu__price">160 грн.</span>
@@ -316,7 +388,7 @@
           </li>
         </article>
         <article class="category-menu__box">
-          <li class="category-menu__item">
+          <li class="category-menu__item interest-box__item">
             <img class="category-menu__images" src="images/burgermenu2.png" alt="Бургер">
             <h5 class="category-menu__title">Бифбургер</h5>
             <span class="category-menu__price">190 грн.</span>
@@ -324,7 +396,7 @@
           </li>
         </article>
         <article class="category-menu__box">
-          <li class="category-menu__item">
+          <li class="category-menu__item interest-box__item">
             <img class="category-menu__images" src="images/burgermenu3.png" alt="Бургер">
             <h5 class="category-menu__title">Королевский чизбургер</h5>
             <span class="category-menu__price">260 грн.</span>
@@ -332,7 +404,7 @@
           </li>
         </article>
         <article class="category-menu__box">
-          <li class="category-menu__item">
+          <li class="category-menu__item interest-box__item">
             <img class="category-menu__images" src="images/burgermenu4.png" alt="Бургер">
             <h5 class="category-menu__title">Черный гамбургер</h5>
             <span class="category-menu__price">199 грн.</span>
@@ -340,7 +412,7 @@
           </li>
         </article>
         <article class="category-menu__box">
-          <li class="category-menu__item">
+          <li class="category-menu__item interest-box__item">
             <img class="category-menu__images" src="images/burgermenu5.png" alt="Бургер">
             <h5 class="category-menu__title">Чикен бургер</h5>
             <span class="category-menu__price">180 грн.</span>
@@ -348,7 +420,7 @@
           </li>
         </article>
         <article class="category-menu__box">
-          <li class="category-menu__item">
+          <li class="category-menu__item interest-box__item">
             <img class="category-menu__images" src="images/burgermenu2.png" alt="Бургер">
             <h5 class="category-menu__title">Бифбургер</h5>
             <span class="category-menu__price">190 грн.</span>
@@ -356,7 +428,7 @@
           </li>
         </article>
         <article class="category-menu__box">
-          <li class="category-menu__item">
+          <li class="category-menu__item interest-box__item">
             <img class="category-menu__images" src="images/burgermenu3.png" alt="Бургер">
             <h5 class="category-menu__title">Королевский чизбургер</h5>
             <span class="category-menu__price">260 грн.</span>
@@ -364,7 +436,7 @@
           </li>
         </article>
         <article class="category-menu__box">
-          <li class="category-menu__item">
+          <li class="category-menu__item interest-box__item">
             <img class="category-menu__images" src="images/burgermenu4.png" alt="Бургер">
             <h5 class="category-menu__title">Черный гамбургер</h5>
             <span class="category-menu__price">199 грн.</span>
@@ -372,7 +444,7 @@
           </li>
         </article>
         <article class="category-menu__box">
-          <li class="category-menu__item">
+          <li class="category-menu__item interest-box__item">
             <img class="category-menu__images" src="images/burgermenu5.png" alt="Бургер">
             <h5 class="category-menu__title">Чикен бургер</h5>
             <span class="category-menu__price">180 грн.</span>
@@ -383,7 +455,7 @@
 
     </div>
   </div>
-</section>
+</section> 
 
   </main>
 

@@ -53,7 +53,7 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.mixitup-control-active svg path {
+.mixitup-control-active svg {
   fill: $bg;
   transition: fill 0.3s ease;
 }
@@ -73,9 +73,47 @@ body {
   padding: 12px 32px;
   background-color: $orange;
   border-radius: 6px;
+  font-size: 18px;
   color: $bg;
   letter-spacing: 0.03em;
   cursor: pointer;
+}
+
+.close {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  top: 30px;
+  right: 25px;
+
+  &__svg {
+    stroke: currentColor;
+    fill: $title;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.burger-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vh;
+  height: 100vh;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+
+  &.burger-overlay--active {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease;
+  }
 }
 
 .active {

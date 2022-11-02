@@ -1,7 +1,6 @@
 $(function () {
 
 
-
   $('.menu-burger').on('click', function () {
     $('.burger-nav').toggleClass('burger-nav--active');
     $('.burger-overlay').toggleClass('burger-overlay--active');
@@ -19,7 +18,14 @@ $(function () {
     $('.catalog-bgmenu').removeClass('catalog-bgmenu--active');
   });
 
-
+  $(".menu, .footer, .header-content").on("click", "a", function (event) {
+    event.preventDefault();
+    var id = $(this).attr('href'),
+      top = $(id).offset().top;
+    $('body,html').animate({
+      scrollTop: top
+    }, 1500);
+  });
 
   $('.tabs-wrapper__tab').on('click', function (e) {
     e.preventDefault();
@@ -45,6 +51,7 @@ $(function () {
   var mixer = mixitup('.category-menu');
 
 });
+
 
 var $range = $(".catalog-price__input"),
   $inputFrom = $(".catalog-price__min"),

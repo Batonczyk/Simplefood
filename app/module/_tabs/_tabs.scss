@@ -27,8 +27,10 @@
     &__top {
       display: flex;
       margin-bottom: 30px;
-      overflow-x: scroll;
 
+      @include r(992) {
+        overflow-x: scroll;
+      }
     }
 
     &__tab {

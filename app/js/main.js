@@ -18,8 +18,8 @@ $(function () {
     $('.catalog-bgmenu').removeClass('catalog-bgmenu--active');
   });
 
-  $(".menu, .footer, .header-content").on("click", "a", function (event) {
-    event.preventDefault();
+  $(".menu, .footer, .header-content").on("click", "a", function () {
+    // event.preventDefault();
     var id = $(this).attr('href'),
       top = $(id).offset().top;
     $('body,html').animate({

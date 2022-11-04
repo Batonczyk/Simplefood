@@ -17,11 +17,17 @@
 
   &__top {
     position: fixed;
+    padding: 60px 0;
     top: 0;
     right: 0;
     left: 0;
     background-color: #f9faff;
     z-index: 15;
+    transition: padding 0.3s ease;
+
+    &.header__top--fixed {
+      padding: 25px 0;
+    }
   }
 
   .logo {
@@ -76,7 +82,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 60px 0;
 
 
   @include r(768) {

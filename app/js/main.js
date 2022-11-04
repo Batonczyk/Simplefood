@@ -1,5 +1,16 @@
 $(function () {
 
+  window.onscroll = function showHeader() {
+
+    var header = document.querySelector('.header__top');
+
+    if (window.pageYOffset > 200) {
+      header.classList.add('header__top--fixed');
+    } else {
+      header.classList.remove('header__top--fixed');
+    }
+
+  }
 
   $('.menu-burger').on('click', function () {
     $('.burger-nav').toggleClass('burger-nav--active');

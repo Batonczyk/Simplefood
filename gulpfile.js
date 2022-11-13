@@ -61,6 +61,7 @@ function scripts() {
       'node_modules/jquery-form-styler/dist/jquery.formstyler.js',
       'node_modules/ion-rangeslider/js/ion.rangeSlider.js',
       'node_modules/rateyo/src/jquery.rateyo.js',
+      'node_modules/wow.js/dist/wow.js',
       'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
       'app/js/main.js'
     ])

@@ -59,71 +59,7 @@
           <span class="sr-only">меню</span>
         </button>
 
-        <div class="burger-nav">
-          <a class="logo burger-nav__logo" href="index.html">
-            <img class="logo__image burger-nav__img" src="images/logo.svg" alt="логотип Симпл Фуд">
-          </a>
 
-          <button class="close">
-            <svg class="close__svg" fill="none">
-              <use xlink:href="images/sprite.svg#closebtn"></use>
-            </svg>
-          </button>
-
-          <ul class="burger-menu">
-            <li class="menu__item burger-menu__item active">
-              <a class="menu__link burger-menu__link" href="index.html">Главная</a>
-            </li>
-            <li class="menu__item burger-menu__item">
-              <a class="menu__link burger-menu__link" href="page.html">Блюда</a>
-            </li>
-            <li class="menu__item burger-menu__item">
-              <a class="menu__link burger-menu__link" href="#ft">Контакты</a>
-            </li>
-          </ul>
-          <ul class="burger-nav__contact">
-            <address class="footer-contacts__address">
-              <li class="footer-contacts__item footer-contacts__item--location">
-                <a class="footer-contacts__link" href="" target="_blank">
-                  ул. Т.Г.Шевченко, 1
-                </a>
-              </li>
-              <li class="footer-contacts__item footer-contacts__item--calling">
-                <a class="footer-contacts__link" href="tel:380501112233" target="_blank">
-                  380501112233
-                </a>
-              </li>
-              <li class="footer-contacts__item footer-contacts__item--mail">
-                <a class="footer-contacts__link" href="mailto:support@sfood.com" target="_blank">
-                  support@sfood.com
-                </a>
-              </li>
-              <ul class="social burger-links">
-                <li class="social__links burger-link__link">
-                  <a class="social__link burger-link__fs" href="">
-                    <svg class="social__icon burger-link__icon">
-                      <use xlink:href="images/sprite.svg#facebook"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="social__links burger-link__link">
-                  <a class="social__link burger-link__tw" href="">
-                    <svg class="social__icon burger-link__icon">
-                      <use xlink:href="images/sprite.svg#twitter"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="social__links burger-link__link">
-                  <a class="social__link burger-link__inst" href="">
-                    <svg class="social__icon burger-link__icon">
-                      <use xlink:href="images/sprite.svg#instagram"></use>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </address>
-          </ul>
-        </div>
 
       </nav>
     </div>
@@ -134,8 +70,74 @@
   <div class="container">
     <div class="header-content">
 
+      <div class="burger-nav">
+        <a class="logo burger-nav__logo" href="index.html">
+          <img class="logo__image burger-nav__img" src="images/logo.svg" alt="логотип Симпл Фуд">
+        </a>
+
+        <button class="close">
+          <svg class="close__svg" fill="none">
+            <use xlink:href="images/sprite.svg#closebtn"></use>
+          </svg>
+        </button>
+
+        <ul class="burger-menu">
+          <li class="menu__item burger-menu__item active">
+            <a class="menu__link burger-menu__link" href="index.html">Главная</a>
+          </li>
+          <li class="menu__item burger-menu__item">
+            <a class="menu__link burger-menu__link" href="page.html">Блюда</a>
+          </li>
+          <li class="menu__item burger-menu__item">
+            <a class="menu__link burger-menu__link" href="#ft">Контакты</a>
+          </li>
+        </ul>
+        <ul class="burger-nav__contact">
+          <address class="footer-contacts__address">
+            <li class="footer-contacts__item footer-contacts__item--location">
+              <a class="footer-contacts__link" href="" target="_blank">
+                ул. Т.Г.Шевченко, 1
+              </a>
+            </li>
+            <li class="footer-contacts__item footer-contacts__item--calling">
+              <a class="footer-contacts__link" href="tel:380501112233" target="_blank">
+                380501112233
+              </a>
+            </li>
+            <li class="footer-contacts__item footer-contacts__item--mail">
+              <a class="footer-contacts__link" href="mailto:support@sfood.com" target="_blank">
+                support@sfood.com
+              </a>
+            </li>
+            <ul class="social burger-links">
+              <li class="social__links burger-link__link">
+                <a class="social__link burger-link__fs" href="">
+                  <svg class="social__icon burger-link__icon">
+                    <use xlink:href="images/sprite.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__links burger-link__link">
+                <a class="social__link burger-link__tw" href="">
+                  <svg class="social__icon burger-link__icon">
+                    <use xlink:href="images/sprite.svg#twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__links burger-link__link">
+                <a class="social__link burger-link__inst" href="">
+                  <svg class="social__icon burger-link__icon">
+                    <use xlink:href="images/sprite.svg#instagram"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </address>
+        </ul>
+      </div>
+
       <div class="header-content__info">
-        <h1 class="header-content__title">
+        <h1 class="header-content__title wow animate__heartBeat" data-wow-delay="2s" data-wow-duration="2s">
           Доставка
           <span>за 15 минут</span>
         </h1>
@@ -144,7 +146,8 @@
           доставка за наш счёт
         </p>
         <ul class="header-content__box">
-          <li class="header-content__links btn animation">
+          <li class="header-content__links btn animation wow animate__shakeX" data-wow-iteration="2"
+            data-wow-delay="10s">
             <a href="page.html" class="header-content__link">
               Заказать
             </a>
@@ -157,7 +160,7 @@
         </ul>
       </div>
 
-      <div class="header-content__images" style="background-image:url(images/guy.png);">
+      <div class="header-content__images wow animate__fadeInRight" style="background-image:url(images/guy.png);">
       </div>
     </div>
   </div>
@@ -312,20 +315,19 @@
           нашей
           доставкой прямо сейчас и получите скиидку!
         </p>
-        <p class="benefits__advantages">
+        <p class="benefits__advantages wow animate__fadeInRightBig">
           <svg class="benefits__svg time">
             <use xlink:href="images/sprite.svg#time"></use>
           </svg>
-
           Быстрая доставка за 15 минут
         </p>
-        <p class="benefits__advantages">
+        <p class="benefits__advantages wow animate__fadeInRightBig">
           <svg class="benefits__svg delivery">
             <use xlink:href="images/sprite.svg#delivery"></use>
           </svg>
           Вежливые курьеры
         </p>
-        <p class="benefits__advantages">
+        <p class="benefits__advantages wow animate__fadeInRightBig">
           <svg class="benefits__svg resturant">
             <use xlink:href="images/sprite.svg#resturent"></use>
           </svg>

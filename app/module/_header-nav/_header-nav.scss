@@ -6,6 +6,15 @@
 
 .header {
   margin-bottom: 0;
+  padding-top: 163px;
+
+  @include r(768) {
+    padding-top: 93px;
+  }
+
+  @include r(576) {
+    padding-top: 112px;
+  }
 
   &__top {
     position: fixed;
@@ -19,6 +28,14 @@
 
     &.header__top--fixed {
       padding: 25px 0;
+
+      @include r(768) {
+        padding: 0;
+      }
+    }
+
+    @include r(768) {
+      padding: 10px 0;
     }
   }
 
@@ -58,7 +75,7 @@
   align-items: center;
 
   @include r(768) {
-    padding: 40px 0;
+    padding: 15px 0;
   }
 
   @include r(576) {
@@ -176,7 +193,7 @@
   &__list {
     display: flex;
     margin-left: auto;
-    margin-right: 49px;
+    margin-right: 59px;
     line-height: 130%;
     font-size: 18px;
     outline: none;

@@ -22,11 +22,23 @@
     right: 0;
     left: 0;
     background-color: #f9faff;
-    z-index: 15;
+    z-index: 1;
     transition: padding 0.3s ease;
 
     &.header__top--fixed {
       padding: 25px 0;
+
+      @include r(576) {
+        padding: 5px 0;
+      }
+    }
+
+    @include r(992) {
+      padding: 30px 0;
+    }
+
+    @include r(576) {
+      padding: 0;
     }
   }
 
@@ -83,64 +95,12 @@
   justify-content: space-between;
   align-items: center;
 
-
   @include r(768) {
-    padding: 40px 0;
+    padding: 0;
   }
 
   @include r(576) {
     padding: 25px 0;
-  }
-
-  .burger-nav {
-    display: none;
-    overflow: hidden;
-
-    &__img {
-      max-width: 100%;
-      padding: 25px 15px;
-    }
-
-    &__social {
-      display: flex;
-    }
-
-    .burger-menu {
-      padding: 25px 15px;
-      border-top: 1px solid #EEEFF3;
-
-      &__item {
-        font-size: 18px;
-
-        &:not(:last-child) {
-          margin-bottom: 20px;
-        }
-      }
-    }
-
-    .burger-nav__contact {
-      padding: 12px 15px;
-      border-top: 1px solid #EEEFF3;
-    }
-
-    @include r(992) {
-      display: block;
-      position: absolute;
-      width: 300px;
-      height: 100%;
-      top: 0;
-      left: 0;
-      transform: translateX(-200%);
-      background-color: $bg;
-      z-index: 3;
-      transition: transform 0.2s ease, background-color 0.2s ease;
-
-      &.burger-nav--active {
-        transform: translateX(0%);
-        transition: transform 0.2s ease, background-color 0.2s ease;
-        position: fixed;
-      }
-    }
   }
 
   .menu-burger {
@@ -185,7 +145,7 @@
   &__list {
     display: flex;
     margin-left: auto;
-    margin-right: 49px;
+    margin-right: 59px;
     line-height: 130%;
     font-size: 18px;
     outline: none;

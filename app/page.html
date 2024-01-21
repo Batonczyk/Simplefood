@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SimpleFood | Доставка пищи</title>
+  <title>SimpleFood | Food deliveryи</title>
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
@@ -19,19 +19,19 @@
     <div class="container">
 
       <nav class="menu">
-        <a class="logo" href="">
-          <img class="logo__image" src="images/logo.svg" alt="логотип Симпл Фуд">
+        <a class="logo" href="#">
+          <img class="logo__image" src="images/logo.svg" alt="Simple food logo">
         </a>
 
         <ul class="menu__list">
           <li class="menu__item">
-            <a class="menu__link" href="index.html">Главная</a>
+            <a class="menu__link" href="index.html">Main</a>
           </li>
           <li class="menu__item active">
-            <a class="menu__link" href="#category">Блюда</a>
+            <a class="menu__link" href="#category">Dishes</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="#">Контакты</a>
+            <a class="menu__link" href="#">Contacts</a>
           </li>
         </ul>
 
@@ -42,7 +42,7 @@
                 <use xlink:href="images/sprite.svg#icon-search"></use>
               </svg>
             </button>
-            <span class="sr-only">поиск</span>
+            <span class="sr-only">search</span>
           </li>
           <li class="menu__buy">
             <button class="menu__btn-search">
@@ -51,17 +51,17 @@
               </svg>
               <span class="menu__link-number">4</span>
             </button>
-            <span class="sr-only">корзина</span>
+            <span class="sr-only">cart</span>
           </li>
         </ul>
         <button class="menu-burger">
           <span class="burger"></span>
-          <span class="sr-only">меню</span>
+          <span class="sr-only">menu</span>
         </button>
 
         <div class="burger-nav">
-          <a class="logo burger-nav__logo" href="">
-            <img class="logo__image burger-nav__img" src="images/logo.svg" alt="логотип Симпл Фуд">
+          <a class="logo burger-nav__logo" href="#">
+            <img class="logo__image burger-nav__img" src="images/logo.svg" alt="Smple food logo">
           </a>
 
           <button class="close">
@@ -72,20 +72,20 @@
 
           <ul class="burger-menu">
             <li class="menu__item burger-menu__item active #home">
-              <a class="menu__link burger-menu__link" href="index.html">Главная</a>
+              <a class="menu__link burger-menu__link" href="index.html">Main</a>
             </li>
             <li class="menu__item burger-menu__item #product">
-              <a class="menu__link burger-menu__link" href="page.html">Блюда</a>
+              <a class="menu__link burger-menu__link" href="page.html">Dishes</a>
             </li>
             <li class="menu__item burger-menu__item #contact">
-              <a class="menu__link burger-menu__link" href="#ft">Контакты</a>
+              <a class="menu__link burger-menu__link" href="#ft">Contacts</a>
             </li>
           </ul>
           <ul class="burger-nav__contact">
             <address class="footer-contacts__address">
               <li class="footer-contacts__item footer-contacts__item--location">
-                <a class="footer-contacts__link" href="" target="_blank">
-                  ул. Т.Г.Шевченко, 1
+                <a class="footer-contacts__link" href="#" target="_blank">
+                  street. T.G.Shevchenko, 1
                 </a>
               </li>
               <li class="footer-contacts__item footer-contacts__item--calling">
@@ -100,21 +100,21 @@
               </li>
               <ul class="social burger-links">
                 <li class="social__links burger-link__link">
-                  <a class="social__link burger-link__fs" href="">
+                  <a class="social__link burger-link__fs" href="#">
                     <svg class="social__icon burger-link__icon">
                       <use xlink:href="images/sprite.svg#facebook"></use>
                     </svg>
                   </a>
                 </li>
                 <li class="social__links burger-link__link">
-                  <a class="social__link burger-link__tw" href="">
+                  <a class="social__link burger-link__tw" href="#">
                     <svg class="social__icon burger-link__icon">
                       <use xlink:href="images/sprite.svg#twitter"></use>
                     </svg>
                   </a>
                 </li>
                 <li class="social__links burger-link__link">
-                  <a class="social__link burger-link__inst" href="">
+                  <a class="social__link burger-link__inst" href="#">
                     <svg class="social__icon burger-link__icon">
                       <use xlink:href="images/sprite.svg#instagram"></use>
                     </svg>
@@ -141,12 +141,12 @@
     <ul class="breadcrumbs">
       <li class="breadcrumbs__list">
         <a class="breadcrumbs__link" href="index.html">
-          Главная
+          Main
         </a>
       </li>
       <li class="breadcrumbs__list">
         <a class="breadcrumbs__link" href="index.html#category">
-          Каталог товаров
+          Product catalog
         </a>
       </li>
     </ul>
@@ -157,7 +157,7 @@
 
     <div class="catalog-select">
       <h4 class="title catalog-select__title">
-        Каталог продуктов
+        Product Catalog
       </h4>
       <button class="catalog-btn">
         <svg class="catalog-btn__svg">
@@ -166,18 +166,18 @@
       </button>
       <form class="catalog-select__filter" action="#">
         <select class="catalog-select__sort select-style">
-          <option value="">По названию</option>
-          <option value="">От дорогих</option>
-          <option value="">От дешёвых</option>
-          <option value="">По популярности</option>
-          <option value="">Новинки</option>
+          <option value="">By name</option>
+          <option value="">From the expensive</option>
+          <option value="">From the cheap ones</option>
+          <option value="">By popularity</option>
+          <option value="">Novelties</option>
         </select>
         <select class="catalog-select__art select-style">
-          <option value="">по 12</option>
-          <option value="">по 10</option>
-          <option value="">по 8</option>
-          <option value="">по 6</option>
-          <option value="">по 3</option>
+          <option value="">by 12</option>
+          <option value="">by 10</option>
+          <option value="">by 8</option>
+          <option value="">by 6</option>
+          <option value="">by 3</option>
         </select>
       </form>
     </div>
@@ -190,45 +190,45 @@
       </button>
       <div class="catalog-category sidebar__items">
         <h4 class="catalog-category__title sidebar__title">
-          Категории
+          Categories
         </h4>
         <ul class="catalog-category__menu sidebar__item">
           <li class="catalog-category__menu-item active">
-            <a class="catalog-category__link" href="#">Бургеры</a>
+            <a class="catalog-category__link" href="#">Burgers</a>
           </li>
           <li class="catalog-category__menu-item">
             <a class="catalog-category__link" href="#">
-              Пицца
+             Pizza
             </a>
           </li>
           <li class="catalog-category__menu-item">
             <a class="catalog-category__link" href="#">
-              Сендвичи
+              Sandwiches
             </a>
           </li>
           <li class="catalog-category__menu-item">
             <a class="catalog-category__link" href="#">
-              Азиатская кухня
+              Asian food
             </a>
           </li>
           <li class="catalog-category__menu-item">
             <a class="catalog-category__link" href="#">
-              Сеты
+              Sets
             </a>
           </li>
           <li class="catalog-category__menu-item">
             <a class="catalog-category__link" href="#">
-              Европейская кухня
+              European food
             </a>
           </li>
           <li class="catalog-category__menu-item">
             <a class="catalog__link" href="#">
-              Напитки
+              Drinks
             </a>
           </li>
           <li class="catalog-category__menu-item">
             <a class="catalog-category__link" href="#">
-              Алкоголь
+             Alkohol
             </a>
           </li>
         </ul>
@@ -236,45 +236,45 @@
 
       <div class="catalog-offers sidebar__items">
         <h4 class="catalog-offers__title sidebar__title">
-          Предложения
+          Offers
         </h4>
         <form class="catalog-offers__form sidebar__item" action="#">
           <label class="catalog-offers__label">
             <input class="catalog-offers__input" type="checkbox">
             <span class="catalog-offers__checkbox">
             </span>
-            <span class="catalog-offers__text">Со скидкой</span>
+            <span class="catalog-offers__text">Discounted</span>
           </label>
           <label class="catalog-offers__label">
             <input class="catalog-offers__input" type="checkbox" checked>
             <span class="catalog-offers__checkbox">
             </span>
-            <span class="catalog-offers__text">Новинка</span>
+            <span class="catalog-offers__text">New</span>
           </label>
           <label class="catalog-offers__label">
             <input class="catalog-offers__input" type="checkbox">
             <span class="catalog-offers__checkbox">
             </span>
-            <span class="catalog-offers__text">Хит</span>
+            <span class="catalog-offers__text">Hit</span>
           </label>
         </form>
       </div>
 
       <div class="catalog-price sidebar__items">
         <h4 class="catalog-price__title sidebar__title">
-          Цена
+          Price
         </h4>
         <form class="catalog-price__form sidebar__item " action="#">
           <div class="catalog-price__filter">
             <div class="catalog-price__box">
               <label class="catalog-price__label sr-only" for=""></label>
-              <span class="catalog-price__from">от</span>
+              <span class="catalog-price__from">min</span>
               <input class="catalog-price__min" type="text" value="0">
               <span class="catalog-price__walut">₴</span>
             </div>
             <div class="catalog-price__box">
               <label class="catalog-price__label sr-only" for="#"></label>
-              <span class="catalog-price__in">до</span>
+              <span class="catalog-price__in">max</span>
               <input class="catalog-price__max" type="text" value="1000">
               <span class="catalog-price__walut">₴</span>
             </div>
@@ -289,45 +289,45 @@
 
         <div class="catalog-category sidebar__items">
           <h4 class="catalog-category__title sidebar__title">
-            Категории
+            Categories
           </h4>
           <ul class="catalog-category__menu sidebar__item">
             <li class="catalog-category__menu-item active">
-              <a class="catalog-category__link" href="#">Бургеры</a>
+              <a class="catalog-category__link" href="#">Burgers</a>
             </li>
             <li class="catalog-category__menu-item">
               <a class="catalog-category__link" href="#">
-                Пицца
+               Pizza
               </a>
             </li>
             <li class="catalog-category__menu-item">
               <a class="catalog-category__link" href="#">
-                Сендвичи
+                Sandwiches
               </a>
             </li>
             <li class="catalog-category__menu-item">
               <a class="catalog-category__link" href="#">
-                Азиатская кухня
+                Asian food
               </a>
             </li>
             <li class="catalog-category__menu-item">
               <a class="catalog-category__link" href="#">
-                Сеты
+                Sets
               </a>
             </li>
             <li class="catalog-category__menu-item">
               <a class="catalog-category__link" href="#">
-                Европейская кухня
+                European cuisine
               </a>
             </li>
             <li class="catalog-category__menu-item">
               <a class="catalog__link" href="#">
-                Напитки
+                Drinks
               </a>
             </li>
             <li class="catalog-category__menu-item">
               <a class="catalog-category__link" href="#">
-                Алкоголь
+                Alkohol
               </a>
             </li>
           </ul>
@@ -335,45 +335,45 @@
 
         <div class="catalog-offers sidebar__items">
           <h4 class="catalog-offers__title sidebar__title">
-            Предложения
+            Offers
           </h4>
           <form class="catalog-offers__form sidebar__item" action="#">
             <label class="catalog-offers__label">
               <input class="catalog-offers__input" type="checkbox">
               <span class="catalog-offers__checkbox">
               </span>
-              <span class="catalog-offers__text">Со скидкой</span>
+              <span class="catalog-offers__text">Discounted</span>
             </label>
             <label class="catalog-offers__label">
               <input class="catalog-offers__input" type="checkbox" checked>
               <span class="catalog-offers__checkbox">
               </span>
-              <span class="catalog-offers__text">Новинка</span>
+              <span class="catalog-offers__text">New</span>
             </label>
             <label class="catalog-offers__label">
               <input class="catalog-offers__input" type="checkbox">
               <span class="catalog-offers__checkbox">
               </span>
-              <span class="catalog-offers__text">Хит</span>
+              <span class="catalog-offers__text">Hit</span>
             </label>
           </form>
         </div>
 
         <div class="catalog-price sidebar__items">
           <h4 class="catalog-price__title sidebar__title">
-            Цена
+            Price
           </h4>
           <form class="catalog-price__form sidebar__item " action="#">
             <div class="catalog-price__filter">
               <div class="catalog-price__box">
                 <label class="catalog-price__label sr-only" for=""></label>
-                <span class="catalog-price__from">от</span>
+                <span class="catalog-price__from">min</span>
                 <input class="catalog-price__min" type="text" value="0">
                 <span class="catalog-price__walut">₴</span>
               </div>
               <div class="catalog-price__box">
                 <label class="catalog-price__label sr-only" for="#"></label>
-                <span class="catalog-price__in">до</span>
+                <span class="catalog-price__in">max</span>
                 <input class="catalog-price__max" type="text" value="1000">
                 <span class="catalog-price__walut">₴</span>
               </div>
@@ -388,98 +388,98 @@
         <div class="catalog__menu-block">
           <article class="category-menu__box">
             <li class="category-menu__item">
+              <img class="category-menu__images" src="images/burgermenu1.png" alt="Cheeseburger with lettuce">
+              <h5 class="category-menu__title">Cheeseburger with lettuce</h5>
+              <span class="category-menu__price">160 UAH.</span>
+              <button class="category-menu__cart animation">To Cart</button>
+            </li>
+          </article>
+          <article class="category-menu__box">
+            <li class="category-menu__item">
+              <img class="category-menu__images" src="images/burgermenu2.png" alt="Beefburger">
+              <h5 class="category-menu__title">Beefburger</h5>
+              <span class="category-menu__price">190 UAH.</span>
+              <button class="category-menu__cart animation">To Cart</button>
+            </li>
+          </article>
+          <article class="category-menu__box">
+            <li class="category-menu__item">
+              <img class="category-menu__images" src="images/burgermenu3.png" alt="Royal cheeseburger">
+              <h5 class="category-menu__title">Royal cheeseburger</h5>
+              <span class="category-menu__price">260 UAH.</span>
+              <button class="category-menu__cart animation">To Cart</button>
+            </li>
+          </article>
+          <article class="category-menu__box">
+            <li class="category-menu__item">
+              <img class="category-menu__images" src="images/burgermenu4.png" alt="Black hamburger">
+              <h5 class="category-menu__title">Black hamburger</h5>
+              <span class="category-menu__price">199 UAH.</span>
+              <button class="category-menu__cart animation">To Cart</button>
+            </li>
+          </article>
+          <article class="category-menu__box">
+            <li class="category-menu__item">
+              <img class="category-menu__images" src="images/burgermenu1.png" alt="Cheeseburger with lettuce">
+              <h5 class="category-menu__title">Cheeseburger with lettuce</h5>
+              <span class="category-menu__price">160 UAH.</span>
+              <button class="category-menu__cart animation">To Cart</button>
+            </li>
+          </article>
+          <article class="category-menu__box">
+            <li class="category-menu__item">
+              <img class="category-menu__images" src="images/burgermenu2.png" alt="Beefburger">
+              <h5 class="category-menu__title">Beefburger</h5>
+              <span class="category-menu__price">190 UAH.</span>
+              <button class="category-menu__cart animation">To Cart</button>
+            </li>
+          </article>
+          <article class="category-menu__box">
+            <li class="category-menu__item">
+              <img class="category-menu__images" src="images/burgermenu3.png" alt="Royal cheeseburger">
+              <h5 class="category-menu__title">Royal cheeseburger</h5>
+              <span class="category-menu__price">260 UAH.</span>
+              <button class="category-menu__cart animation">To Cart</button>
+            </li>
+          </article>
+          <article class="category-menu__box">
+            <li class="category-menu__item">
+              <img class="category-menu__images" src="images/burgermenu4.png" alt="Black hamburger">
+              <h5 class="category-menu__title">Black hamburger</h5>
+              <span class="category-menu__price">199 UAH.</span>
+              <button class="category-menu__cart animation">To Cart</button>
+            </li>
+          </article>
+          <article class="category-menu__box">
+            <li class="category-menu__item">
               <img class="category-menu__images" src="images/burgermenu1.png" alt="Бургер">
-              <h5 class="category-menu__title">Чизбургер с листьями салата</h5>
-              <span class="category-menu__price">160 грн.</span>
-              <button class="category-menu__cart animation">В корзину</button>
+              <h5 class="category-menu__title">Cheeseburger with lettuce.</h5>
+              <span class="category-menu__price">160 UAH.</span>
+              <button class="category-menu__cart animation">To Cart</button>
             </li>
           </article>
           <article class="category-menu__box">
             <li class="category-menu__item">
               <img class="category-menu__images" src="images/burgermenu2.png" alt="Бургер">
-              <h5 class="category-menu__title">Бифбургер</h5>
-              <span class="category-menu__price">190 грн.</span>
-              <button class="category-menu__cart animation">В корзину</button>
+              <h5 class="category-menu__title">Beefburger</h5>
+              <span class="category-menu__price">190 UAH.</span>
+              <button class="category-menu__cart animation">To Cart</button>
             </li>
           </article>
           <article class="category-menu__box">
             <li class="category-menu__item">
               <img class="category-menu__images" src="images/burgermenu3.png" alt="Бургер">
-              <h5 class="category-menu__title">Королевский чизбургер</h5>
-              <span class="category-menu__price">260 грн.</span>
-              <button class="category-menu__cart animation">В корзину</button>
+              <h5 class="category-menu__title">Royal cheeseburger</h5>
+              <span class="category-menu__price">260 UAH.</span>
+              <button class="category-menu__cart animation">To Cart</button>
             </li>
           </article>
           <article class="category-menu__box">
             <li class="category-menu__item">
-              <img class="category-menu__images" src="images/burgermenu4.png" alt="Бургер">
-              <h5 class="category-menu__title">Черный гамбургер</h5>
-              <span class="category-menu__price">199 грн.</span>
-              <button class="category-menu__cart animation">В корзину</button>
-            </li>
-          </article>
-          <article class="category-menu__box">
-            <li class="category-menu__item">
-              <img class="category-menu__images" src="images/burgermenu1.png" alt="Бургер">
-              <h5 class="category-menu__title">Чизбургер с листьями салата</h5>
-              <span class="category-menu__price">160 грн.</span>
-              <button class="category-menu__cart animation">В корзину</button>
-            </li>
-          </article>
-          <article class="category-menu__box">
-            <li class="category-menu__item">
-              <img class="category-menu__images" src="images/burgermenu2.png" alt="Бургер">
-              <h5 class="category-menu__title">Бифбургер</h5>
-              <span class="category-menu__price">190 грн.</span>
-              <button class="category-menu__cart animation">В корзину</button>
-            </li>
-          </article>
-          <article class="category-menu__box">
-            <li class="category-menu__item">
-              <img class="category-menu__images" src="images/burgermenu3.png" alt="Бургер">
-              <h5 class="category-menu__title">Королевский чизбургер</h5>
-              <span class="category-menu__price">260 грн.</span>
-              <button class="category-menu__cart animation">В корзину</button>
-            </li>
-          </article>
-          <article class="category-menu__box">
-            <li class="category-menu__item">
-              <img class="category-menu__images" src="images/burgermenu4.png" alt="Бургер">
-              <h5 class="category-menu__title">Черный гамбургер</h5>
-              <span class="category-menu__price">199 грн.</span>
-              <button class="category-menu__cart animation">В корзину</button>
-            </li>
-          </article>
-          <article class="category-menu__box">
-            <li class="category-menu__item">
-              <img class="category-menu__images" src="images/burgermenu1.png" alt="Бургер">
-              <h5 class="category-menu__title">Чизбургер с листьями салата</h5>
-              <span class="category-menu__price">160 грн.</span>
-              <button class="category-menu__cart animation">В корзину</button>
-            </li>
-          </article>
-          <article class="category-menu__box">
-            <li class="category-menu__item">
-              <img class="category-menu__images" src="images/burgermenu2.png" alt="Бургер">
-              <h5 class="category-menu__title">Бифбургер</h5>
-              <span class="category-menu__price">190 грн.</span>
-              <button class="category-menu__cart animation">В корзину</button>
-            </li>
-          </article>
-          <article class="category-menu__box">
-            <li class="category-menu__item">
-              <img class="category-menu__images" src="images/burgermenu3.png" alt="Бургер">
-              <h5 class="category-menu__title">Королевский чизбургер</h5>
-              <span class="category-menu__price">260 грн.</span>
-              <button class="category-menu__cart animation">В корзину</button>
-            </li>
-          </article>
-          <article class="category-menu__box">
-            <li class="category-menu__item">
-              <img class="category-menu__images" src="images/burgermenu4.png" alt="Бургер">
-              <h5 class="category-menu__title">Черный гамбургер</h5>
-              <span class="category-menu__price">199 грн.</span>
-              <button class="category-menu__cart animation">В корзину</button>
+              <img class="category-menu__images" src="images/burgermenu4.png" alt="Black hamburger">
+              <h5 class="category-menu__title">Black hamburger</h5>
+              <span class="category-menu__price">199 UAH.</span>
+              <button class="category-menu__cart animation">To Cart</button>
             </li>
           </article>
         </div>
@@ -518,24 +518,24 @@
     <div class="mobile-box">
       <div class="mobile-box__item">
         <h2 class="title mobile-box__title">
-          Скачайте мобильное приложение
+          Download the mobile app
         </h2>
         <p class="mobile-box__text">
-          Рестораны, которые вы любите - в ваших руках. Устанавливайте приложение и заказывайте еду в любом удобном
-          месте.
+          The restaurants you love are at your fingertips. Install the app and order food wherever you want.
+          wherever you want.
         </p>
         <div class="mobile-box__links">
           <a class="mobile-box__link" href="apple.com/pl/app-store/" target="_blank">
-            <img class="mabile-box__store" src="images/appstore.png" alt="">
+            <img class="mabile-box__store" src="images/appstore.png" alt="mobile app">
           </a>
           <a class="mobile-box__link"
             href="https://play.google.com/store/games?gl=PL&utm_source=emea_Med&utm_medium=hasem&utm_content=Nov2020&utm_campaign=Evergreen&pcampaignid=MKT-EDR-emea-pl-1001280-Med-hasem-py-Evergreen-Nov2020-Text_Search_BKWS%7CONSEM_kwid_43700006560475477&gclid=Cj0KCQjwl92XBhC7ARIsAHLl9akyrsgsR2XXgkBX_kTOl_Af3ubb1hcp6HB-Z4lzONWxa4KnGaQRu2gaAgALEALw_wcB&gclsrc=aw.ds"
             target="_blank">
-            <img class="mabile-box__store" src="images/playmarket.png" alt="">
+            <img class="mabile-box__store" src="images/playmarket.png" alt="mobile app">
           </a>
         </div>
       </div>
-      <img class="mobile-box__image" src="images/app.jpg" alt="фото приложения">
+      <img class="mobile-box__image" src="images/app.jpg" alt="mobile app">
     </div>
   </div>
 </section>
@@ -543,14 +543,14 @@
   <div class="container">
     <div class="promotions">
       <h4 class="title promotions__title">
-        Акции и скидки
+        Promotions and discounts
       </h4>
       <ul class="promotions__list">
         <li class="promotions__item">
           <img class="promotions__images" src="images/promo1.jpg" alt="Скидка 50% на вторую пиццу">
           <a class="promotions__link" href="#">
             <p class="promotions__text">
-              Скидка 50% на вторую пиццу
+              50% discount on the second pizza
             </p>
           </a>
         </li>
@@ -558,7 +558,7 @@
           <img class="promotions__images" src="images/promo2.jpg" alt="Картошечка из KFC даром при заказе бургера">
           <a class="promotions__link" href="#">
             <p class="promotions__text">
-              Картошечка из KFC даром при заказе бургера
+              KFC fries for free when you order a burger
             </p>
           </a>
         </li>
@@ -566,7 +566,7 @@
           <img class="promotions__images" src="images/promo3.jpg" alt="Чёрные бургеры на чёрный день">
           <a class="promotions__link" href="#">
             <p class="promotions__text">
-              Чёрные бургеры на чёрный день
+              Black burgers for a rainy day.
             </p>
           </a>
         </li>
@@ -582,82 +582,82 @@
     <div class="footer__top" id="ft">
       <form class="form">
         <a class="logo form__logo" href="#ft3">
-          <img class="logo__image" src="images/logo.svg" alt="логотип Симпл Фуд">
+          <img class="logo__image" src="images/logo.svg" alt="Simple Food logo">
         </a>
         <div class="form__item">
           <label for="mail"></label>
-          <input class="form__input" type="text" id="mail" placeholder="Ваш email">
+          <input class="form__input" type="text" id="mail" placeholder="Your email">
           <button class="form__btn" type="submit">
             <svg class="form__svg">
               <use xlink:href="images/sprite.svg#frame"></use>
             </svg>
-            Подписаться
+            Subscribe
           </button>
         </div>
       </form>
       <ul class="footer-menu">
         <li class="footer-menu__item">
           <a class="footer-menu__link" href="#" target="_blank">
-            Как это работает
+            How it works
           </a>
         </li>
         <li class="footer-menu__item">
           <a class="footer-menu__link" href="#" target="_blank">
-            Продукты
+            Products
           </a>
         </li>
         <li class="footer-menu__item">
           <a class="footer-menu__link" href="#" target="_blank">
-            Блюда
+            Dishes
           </a>
         </li>
         <li class="footer-menu__item">
           <a class="footer-menu__link" href="index.html#category">
-            Меню
+            Menu
           </a>
         </li>
       </ul>
       <ul class="footer-news">
         <li class="footer-news__item">
           <a class="footer-news__link" href="#" target="_blank">
-            О нас
+            About us
           </a>
         </li>
         <li class="footer-news__item">
           <a class="footer-news__link" href="#" target="_blank">
-            Новости
+            News
           </a>
         </li>
         <li class="footer-news__item">
           <a class="footer-news__link" href="#" target="_blank">
-            Партнеры
+            Partners
           </a>
         </li>
         <li class="footer-news__item">
           <a class="footer-news__link" href="#" target="_blank">
-            ЧаВо
+            FAQ
           </a>
         </li>
       </ul>
       <ul class="footer-map">
         <li class="footer-map__item">
           <a class="footer-map__link" href="index.html#mobileapp" target="_blank">
-            Скачать приложение
+            Download the app
           </a>
         </li>
         <li class="footer-map__item">
           <a class="footer-map__link" href="productpage.html#tab-3" target="_blank">
-            Блог
+            Blog
           </a>
         </li>
         <li class="footer-map__item">
           <a class="footer-map__link" href="page.html#catalogmenu" target="_blank">
-            Что нового?
+            What's new?
           </a>
         </li>
         <li class="footer-map__item">
           <a class="footer-map__link" href="#" target="_blank">
-            Карта сайта
+            Site Map
           </a>
         </li>
       </ul>
@@ -667,7 +667,7 @@
             <a class="footer-contacts__link"
               href="https://www.google.com/maps/place/Vul.+Tarasa+Shevchenka,+Zubra,+L'vivs'ka+oblast,+Ukraina/@49.7623298,24.0560966,17z/data=!3m1!4b1!4m5!3m4!1s0x473ae8efee189497:0xf4a0351355d913c7!8m2!3d49.7623298!4d24.0582853"
               target="_blank">
-              ул. Т.Г.Шевченко, 1
+              street. T.G.Shevchenko, 1
             </a>
           </li>
           <li class="footer-contacts__item footer-contacts__item--calling">

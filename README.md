@@ -1,5 +1,5 @@
 <p align="center">
-     <img src="https://i.ibb.co/J7VCnNC/letter-s-9871812.png" alt="letter-s-9871812" border="0" width="500px">
+     <img src="https://i.ibb.co/J7VCnNC/letter-s-9871812.png" alt="letter-s-9871812" border="0" width="300px">
 </p>
 
 <p align="center">

@@ -3,26 +3,34 @@
 </p>
 
 <p align="center">
-   <img src="" alt="Unity Version">
-   <img src="" alt="Game Version">
-   <img src="" alt="License">
+   <img alt="HTML" src="https://img.shields.io/badge/HTML-%23fc7b03?style=flat&labelColor=%23fc7b03">
+   <img alt="SCSS" src="https://img.shields.io/badge/SCSS-%23fc0703?style=flat">
+   <img alt="Static Badge" src="https://img.shields.io/badge/JS-%23fcd303?style=flat">
 </p>
 
 ## About
 
-About Text Here
+Front-end development for the Simplefood online store. The website consists of three pages: the main page, a page with filters and a catalog, and the product page. 🍔🌐
 
-## Documentation
+## Tehnologies
 
-Documentation Here
+- HTML
+- CSS
+- SCSS
+- GULP
+- Jquery
+- JS
 
-## Distribute
+## Features
 
-- [Service Name](Page Link)
+- The site is fully responsive, adapting to all mobile devices, even with a very narrow screen.
+- http://simplefood.biz.pl/?
 
 
-## Developers
+## Use instruction
+1) To access the product catalog press "Order" on the home page;
+http://simplefood.biz.pl/page.html
 
-- [Delevoper Name](GitHub Profile Link)
+2) To go to the blog click on the footer "Blog" or go through the link
+http://simplefood.biz.pl/productpage.html#tab-3
 
-## License

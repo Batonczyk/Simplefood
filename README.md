@@ -1,5 +1,5 @@
 <p align="center">
-      <img src="https://www.flaticon.com/free-icon/letter-s_9972701?term=s&page=1&position=33&origin=search&related_id=9972701" width="726">
+      <img src="https://images.app.goo.gl/k5dNxi6ALWcRxfvx8" width="726">
 </p>
 
 <p align="center">
